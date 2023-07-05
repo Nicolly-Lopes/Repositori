@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Libre+Baskerville:ital@1&family=Montserrat:ital,wght@0,100;0,200;1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?família=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;1,100&display=swap');
+
+body {
+    font-family: 'Arvo', sans-serif;
+}
+
+/*--------------------------------------------Header-----------------------------------------------------------------*/
+header {
+    width: 100%;
+    background: #015641;
+    padding: 1.3em 0;
+    text-align: center;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.logo {
+    padding: 0 0 10px 0;
+    width: 12.5em;
+    height: 12.5em;
+    text-align: center;
+}
+
+.logo2 {
+    padding: 20px 0 20px 0;
+    width: 10%;
+    height: auto;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+
+nav li {
+    margin: 0.5em 0;
+}
+
+
+nav a {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+
+nav a:hover {
+    color: #D2691E;
+    text-decoration: underline;
+}
+
+
+.caixa {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*-----------------------------------------------------Conteudo Principal--------------------------------------------------------*/
+main {
+    width: 100%;
+    height: auto;
+}
+
+/*foi usado para colocar margem nas páginas de conteúdo*/
+.conteudo-site {
+    margin: 0 50px 0 150px;
+    height: auto;
+}
+
+/*define o tamanho que o conteudo de todas as páginas irão ocupar, o display: none foi usado para ocultar as páginas*/
+.conteudo {
+    display: none;
+    height: 100%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 250px;
+}
+
+.conteudoFinal {
+    display: none;
+    height: 500px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 350px;
+}
+
+
+/*conteúdo da página que mostra as áreas com menores produtividade*/
+#buscar-produtividade {
+    height: 230px;
+    width: 60%;
+}
+
+/*titulo principal que aparece em tiodas as páginas do conteúdo do site*/
+#titulo-conteudo {
+    font-family: 'Libre Baskerville', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    padding: 100px 0;
+    margin-right: 100px;
+}
+
+#titulo-conteudo:hover {
+    transform: scale(1.05);
+}
+
+h4 {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/*imagem da página produção*/
+.imagem-producao {
+    max-width: 90%;
+    height: auto;
+    float: right;
+}
+
+/*frase que aparece antes de que clicar o select*/
+#titulo,
+#titulo2 {
+    text-align: center;
+    margin-top: 120px;
+    font-size: 3em;
+    color: #9C4931;
+    font-weight: bold;
+}
+
+strong {
+    color: #D3543F;
+}
+
+
+/*Parágrafos de saída*/
+#outResultado,
+#outMenorMedia,
+#outMenorProd,
+#outMaiorProd, #outFiltro, label,
+p {
+    padding: 40px 20px 20px 20px;
+    line-height: 1.5em;
+    font-size: 19px;
+}
+
+#outMenorProd,
+#outMaiorProd,
+#outMenorMedia {
+    color: #D3543F;
+    font-size: 23px;
+}
+
+
+/* select */
+#sltSafra {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #933f1e;
+    color: white;
+    transition: transform 0.2s;
+}
+
+select:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/*Botão dos parágrafos de saída */
+#btMostrar,
+#btMenorProd,
+#btMaiorProd, #btPesquisar {
+    margin-left: 10px;
+    padding: 8px 10px;
+    font-size: 13px;
+    background-color: #fda172;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: 0.5s all;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+#btMostrar:hover,
+#btMenorProd:hover,
+#btMaiorProd:hover, #btPesquisar:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.2s all;
+    background: #f8844a;
+}
+
+#btMostrar:active,
+#btMenorProd:active,
+#btMaiorProd:active, #btPesquisar:active {
+    transition: 0.2s all;
+    background: #fd9a69;
+}
+
+
+/*caixinha do input de busca*/
+#inMedia, .inBarraPesquisa {
+    padding-right: 4px;
+    margin: 0 4px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: #333;
+}
+
+/*imagens com zoom da pagina de menor produtividade*/
+.imagem-zoom img {
+    width: 250px;
+    height: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagem-zoom img:hover {
+    transform: scale(1.4);
+}
+
+
+/*Imagens da lavouras*/
+.slide-imagens {
+    border-radius: 20px;
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    position: absolute;
+    top: 70%;
+    right: 8%;
+    transform: translateY(-50%);
+}
+
+.imagens-lavoura {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    animation: slide-animation 20s infinite;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide-animation {
+
+    0%,
+    100% {
+        transform: translateX(0%);
+    }
+
+    20% {
+        transform: translateX(-100%);
+    }
+
+    40% {
+        transform: translateX(-200%);
+    }
+
+    60% {
+        transform: translateX(-300%);
+    }
+
+    80% {
+        transform: translateX(-400%);
+    }
+}
+
+@media (max-width: 768px) {
+    .imagem-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+#tabela {
+    width: 60%;
+    align-items: center;
+    margin: 0 0 0 100px;
+    table-layout: fixed;
+}
+
+#tabela th,
+#tabela td {
+    padding: 8px;
+    text-align: center;
+    border: 5px double black;
+}
+
+#tabela th {
+    background-color: #c0633a;
+    font-weight: bold;
+}
+
+#tabela tr {
+    background-color: #f5deb3;
+}
+
+#tabela tr:hover {
+    background-color: #de9967;
+}
+
+
+
+/*------------------------------------------------footer-------------------------------------------------------------------------*/
+footer {
+    text-align: center;
+    background-color: #015641;
+    padding: 10px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+}

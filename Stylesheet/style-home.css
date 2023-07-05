@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Libre+Baskerville:ital@1&family=Montserrat:ital,wght@0,100;0,200;1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?família=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;1,100&display=swap');
+
+body {
+  font-family: 'Arvo', sans-serif;
+}
+
+/* --------------------------------------------------header------------------------------------------------------------------------*/
+header {
+  width: 100%;
+  background: #015641;
+  padding: 1.3em 0;
+}
+
+.logo {
+  width: 12.5em;
+  height: 12.5em;
+  padding: 0 9.4em;
+}
+
+nav {
+  position: absolute;
+  top: 6.9em;
+  padding-right: 9.4em;
+  right: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  margin-left: 2em;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #D2691E;
+  text-decoration: underline;
+}
+
+.caixa {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*---------------------------------------------------Conteudo Pruncipal---------------------------------------------------------*/
+
+/*---------------------------------------------------Conteudo Principal---------------------------------------------------------*/
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.titulo-secundario {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+  font-family: 'Libre Baskerville', sans-serif;
+}
+
+/*Animação do titulo "Fazenda Recanto Grande"*/
+.imagem-principal {
+  position: relative;
+}
+
+.imagem-graos {
+  width: 100%;
+  padding-bottom: 1.3em;
+}
+
+.titulo-principal {
+  font-family: 'Libre Baskerville', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 4em;
+  /* Tamanho da fonte aumentado para 48 pixels */
+  font-weight: bold;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  /* Sombra de texto mais proeminente */
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+h1 {
+  font-size: 30px;
+  margin-top: 100px;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+}
+
+
+/*Mensagem de cookies*/
+.cookie-message {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 10px;
+  display: none;
+}
+
+.cookie-message p {
+  margin: 0;
+}
+
+.cookie-message button {
+  margin-top: 30px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/*Texto e imagem sobre a fazenda */
+.texto{
+  width: 500px;
+  height: 600px;
+  padding: 40px;
+  margin-left: 600px;
+  max-width: 100%;
+  background: linear-gradient(to bottom, #C6E4C4, #6DD08A);
+  position: relative;
+  left: 10%;
+  bottom: 650px;
+  z-index: 2;
+}
+
+.imagem-cafeComSol{
+  width: 600px;
+  height: 650px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  position: relative;
+  margin-left: 400px;
+  z-index: 1;
+  top: 100px;
+}
+
+.principal {
+  margin-top: 50px;
+  height: 800px;
+}
+
+.principal p {
+  font-size: 20px;
+  line-height: 1em;
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+.principal em {
+  font-style: italic;
+}
+
+/*Animação com os tópicos referentes aos valores e objetivos da fazenda*/
+.valores strong {
+  font-weight: bold;
+}
+
+.valores p {
+  display: inline-block;
+  line-height: 1.5em;
+  vertical-align: top;
+  text-align: justify;
+  width: 22%;
+  padding: 30px 30px;
+}
+
+.valores {
+  display: inline-block;
+  font-size: 20px;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.valores:hover {
+  opacity: 0.8;
+}
+
+.valores:hover p {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*Carrossel de imagens*/
+.galeria-imagens {
+  display: flex;
+  height: 15rem;
+  gap: 1rem;
+  padding: 20px 40px;
+}
+
+.galeria-imagens>div {
+  flex: 1;
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.galeria-imagens>div:hover {
+  flex: 5;
+}
+
+
+
+
+/*------------------------------------------------------------------footer-----------------------------------------------------------------*/
+
+footer {
+  text-align: center;
+  background-color: #015641;
+  padding: 10px 0;
+}
+
+.copyright {
+  color: #FFFFFF;
+  font-size: 13px;
+}
