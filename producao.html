@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazenda Recanto Grande</title>
+    <link rel="shortcut icon" href="./Imagens-Geral/iconeCampo.png" sizes="32x32" type="image/x-icon">
+    <link rel="stylesheet" href="./Stylesheet/reset.css">
+    <link rel="stylesheet" href="./Stylesheet/producao.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="caixa-conteudo">
+            <img class="logo2" src="./Imagens-Geral/logo2.png">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="producao.html" onclick="mostrarConteudo(1)">Produção</a>
+                    <li><a href="#" onclick="mostrarConteudo(2)">Maior produtividade</a>
+                    <li><a href="#" onclick="mostrarConteudo(3)">Produção Média</a></li>
+                    <li><a href="#" onclick="mostrarConteudo(4)">Menor produtividade</a></li>
+                    <li><a href="#" onclick="mostrarConteudo(5)">Filtro</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="conteudo-site">
+
+            <!------------------------------Página com as informações de cada safra:------------------------------------>
+         <!------------------------------Página com as informações de cada safra:------------------------------------>
+         <section id="select">
+            <h1 id="titulo-conteudo">Gerenciamento das Áreas de Produção</h1>
+
+            <select id="sltSafra">
+                <option value="" disabled selected>Selecione uma safra</option>
+                <option value="0">Safra 2014</option>
+                <option value="1">Safra 2015</option>
+                <option value="2">Safra 2016</option>
+                <option value="3">Safra 2017</option>
+                <option value="4">Safra 2018</option>
+                <option value="5">Safra 2019</option>
+                <option value="6">Safra 2020</option>
+                <option value="7">Safra 2021</option>
+                <option value="8">Safra 2022</option>
+                <option value="9">Safra 2023</option>
+            </select>
+        </section>
+
+        <section>
+            <div class="tamanhoPagina">
+                <div id="conteudo-1" class="conteudo">
+                    <div class="imagem-producao"><img class="imagem-producao"
+                            src="./Imagens-Geral/imagem-producao.png"></div>
+
+                    <fieldset class="informacao-safra">
+                        <div id="divSafra">
+                            <h2 id="titulo">Selecione uma <strong>safra</strong> <br>para mais informações!</p>
+                                <h3 id="outResultado"></h3>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+
+            <!-------------------Página que informa a área com menor e maior produtividade dsa safra:------------------>
+            <section>
+                
+                <div id="conteudo-2" class="conteudo">
+                    <div class="slide-imagens">
+                        <div class="imagens-lavoura">
+                          <div class="slide">
+                            <img src="./Imagens-Geral/lavoura1.png" alt="Image 1">
+                          </div>
+                          <div class="slide">
+                            <img src="./Imagens-Geral/lavoura2.png" alt="Image 2">
+                          </div>
+                          <div class="slide">
+                            <img src="./Imagens-Geral/lavoura3.png" alt="Image 3">
+                          </div>
+                          <div class="slide">
+                            <img src="./Imagens-Geral/lavoura4.png" alt="Image 4">
+                          </div>
+                        </div>
+                      </div>
+
+
+                    <h4>Área com maior produtividade da safra:</h4>
+
+                    <p>Maior produtividade da safra<input type="button" value="Buscar 🔍" id="btMaiorProd"></p>
+
+                    <h3 id="outMaiorProd"></h3>
+                </div>
+            </section>
+
+
+
+            <!-------Página que mostra áreas com produtividade menores que um número informado pelo usuário:------------>
+            <section id="conteudo-3" class="conteudo">
+
+                <div id="buscar-produtividade">
+                    <label>Buscar áreas com produtividade menores que:<input type="number" id="inMedia"required></label>
+                    <input type="button" value="Buscar 🔍" id="btMostrar">
+                    <h3 id="outMenorMedia"></h3>
+                </div>
+
+                <div class="imagem-zoom">
+                    <img src="./Imagens-Geral/rama1.png" alt="Imagem 1">
+                    <img src="./Imagens-Geral/rama2.png" alt="Imagem 2">
+                    <img src="./Imagens-Geral/rama3.png" alt="Imagem 3">
+                    <img src="./Imagens-Geral/rama4.png" alt="Imagem 4">
+                    <img src="./Imagens-Geral/rama5.png" alt="Imagem 5">
+                    <img src="./Imagens-Geral/rama1.png" alt="Imagem 6">
+                </div>
+            </section>
+
+
+              <!-----------------Página que informa a produtividade de uma área em todas as safras:---------------------->
+              <section>
+                <div id="conteudo-4" class="conteudo">
+                <div class="imagem-producao"><img src="./Imagens-Geral/figura3.png"></div>
+
+                <h4>Área com menor produtividade da safra:</h4>
+                <p>Menor produtividade da safra<input type="button" value="Buscar 🔍" id="btMenorProd"></p>
+
+                <h3 id="outMenorProd"></h3>
+
+
+            </div>
+            </section>
+
+
+
+            <!---------------------------------------Página com o filtro:---------------------------------------------->
+            <section id="conteudo-5" class="conteudoFinal">
+                <h1 id="titulo-conteudo">Gerenciamento das Áreas de Produção</h1>
+
+                <div class="imagem-producao"><img src="./Imagens-Geral/figura2.png"></div>
+
+                <li><input class="inBarraPesquisa" type="search" placeholder="Buscar área" list="areas">
+                    <datalist id="areas">
+                        <option value="A15"></option>
+                        <option value="A22"></option>
+                        <option value="A74"></option>
+                        <option value="L87"></option>
+                        <option value="M16"></option>
+                        <option value="O47"></option>
+                        <option value="R40"></option>
+                        <option value="R72"></option>
+                        <option value="S96"></option>
+                        <option value="V49"></option>
+                    </datalist>
+                    <input type="button" value = "Buscar 🔎" id="btPesquisar">
+                </li>
+    
+                <h3 id="outFiltro"></h3>
+        
+              
+            </section>
+
+
+        </section>
+    </main>
+
+    <footer>
+        <img class="logo" src="./Imagens-Geral/logo.png">
+        <p class="copyright">Copyright &copy; 2023 Fazenda Recanto Grande</p>
+    </footer>
+</body>
+
+<script src="./JavaScript/producao.js"></script>
+<script src="./JavaScript/filtro.js"></script>
+
+</html>
