@@ -76,37 +76,22 @@ nav a:hover {
 /*-----------------------------------------------------Conteudo Principal--------------------------------------------------------*/
 main {
     width: 100%;
-    height: auto;
+    min-height: 110vh;
 }
 
 /*foi usado para colocar margem nas páginas de conteúdo*/
 .conteudo-site {
     margin: 0 50px 0 150px;
-    height: auto;
+    min-height: 100%;
+    padding: 10px;
 }
 
 /*define o tamanho que o conteudo de todas as páginas irão ocupar, o display: none foi usado para ocultar as páginas*/
 .conteudo {
     display: none;
-    height: 100%;
+    min-height: calc(100% - 320px);
     margin-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 250px;
-}
-
-.conteudoFinal {
-    display: none;
-    height: 500px;
-    margin-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 350px;
-}
-
-
-/*conteúdo da página que mostra as áreas com menores produtividade*/
-#buscar-produtividade {
-    height: 230px;
-    width: 60%;
+    position: relative;
 }
 
 /*titulo principal que aparece em tiodas as páginas do conteúdo do site*/
@@ -140,7 +125,7 @@ h4 {
 #titulo,
 #titulo2 {
     text-align: center;
-    margin-top: 120px;
+    margin-top: 3em;
     font-size: 3em;
     color: #9C4931;
     font-weight: bold;
@@ -155,10 +140,12 @@ strong {
 #outResultado,
 #outMenorMedia,
 #outMenorProd,
-#outMaiorProd, #outFiltro, label,
+#outMaiorProd,
+#outFiltro,
+label,
 p {
     padding: 40px 20px 20px 20px;
-    line-height: 1.5em;
+    line-height: 1.7em;
     font-size: 19px;
 }
 
@@ -194,7 +181,8 @@ select:hover {
 /*Botão dos parágrafos de saída */
 #btMostrar,
 #btMenorProd,
-#btMaiorProd, #btPesquisar {
+#btMaiorProd,
+#btPesquisar {
     margin-left: 10px;
     padding: 8px 10px;
     font-size: 13px;
@@ -209,7 +197,8 @@ select:hover {
 
 #btMostrar:hover,
 #btMenorProd:hover,
-#btMaiorProd:hover, #btPesquisar:hover {
+#btMaiorProd:hover,
+#btPesquisar:hover {
     cursor: pointer;
     transform: scale(1.05);
     transition: 0.2s all;
@@ -218,14 +207,16 @@ select:hover {
 
 #btMostrar:active,
 #btMenorProd:active,
-#btMaiorProd:active, #btPesquisar:active {
+#btMaiorProd:active,
+#btPesquisar:active {
     transition: 0.2s all;
     background: #fd9a69;
 }
 
 
 /*caixinha do input de busca*/
-#inMedia, .inBarraPesquisa {
+#inMedia,
+.inBarraPesquisa {
     padding-right: 4px;
     margin: 0 4px;
     font-size: 16px;
@@ -235,20 +226,10 @@ select:hover {
     color: #333;
 }
 
-/*imagens com zoom da pagina de menor produtividade*/
-.imagem-zoom img {
-    width: 250px;
-    height: 250px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.imagem-zoom img:hover {
-    transform: scale(1.4);
-}
-
 
 /*Imagens da lavouras*/
 .slide-imagens {
+    position: absolute;
     border-radius: 20px;
     width: 500px;
     height: 300px;
@@ -315,13 +296,13 @@ select:hover {
 #tabela {
     width: 60%;
     align-items: center;
-    margin: 0 0 0 100px;
+    margin: 50px 0 0 100px;
     table-layout: fixed;
 }
 
 #tabela th,
 #tabela td {
-    padding: 8px;
+    padding: 8px 15px;
     text-align: center;
     border: 5px double black;
 }

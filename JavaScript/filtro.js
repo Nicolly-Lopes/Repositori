@@ -1,11 +1,30 @@
 const outFiltro = document.getElementById("outFiltro");
-var btPesquisar = document.getElementById("btPesquisar");
-var filtro = document.querySelector('.inBarraPesquisa');
-filtro.value = "";
-filtro.focus();
+const filtro = document.querySelector('.inBarraPesquisa');
 
-btPesquisar.addEventListener("click", pesquisarTime);
-function pesquisarTime() {
+filtro.addEventListener('input', function () {
+    if (filtro.value === "") {
+        outFiltro.innerHTML = '';
+        filtro.focus();
+    }
+});
+
+filtro.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        pesquisarArea();
+    }
+});
+
+btPesquisar.addEventListener("click", pesquisarArea);
+
+function pesquisarArea() {
+    var opMaiuscula = filtro.value
+    var flag = 0;
+
+    frase2 = document.getElementById("titulo2")
+    if (frase2) {
+        frase2.remove();
+    }
+
     outFiltro.innerHTML = "";
 
     if (filtro.value == "") {
@@ -18,24 +37,24 @@ function pesquisarTime() {
         var divisor = 0;
         var contadora = 0;
         var ano = 2014;
-        var mediaTotal = 0;
-        var prodTotal = 0;
-
 
         for (var ind = 0; ind < vetID.length; ind++) {
-            if (vetID[ind] == filtro.value) {
+            if (vetID[ind] == opMaiuscula.toUpperCase()) {
+                flag++;
                 vetSetor.push(vetArea[ind]);
                 vetProd.push(vetSacas[ind]);
                 divisor = vetProd[contadora] / vetSetor[contadora];
                 vetDivisor.push(divisor);
-                prodTotal+= vetSacas[ind];
-                mediaTotal+=divisor;
                 outFiltro.innerHTML += `<br> No ano de ${ano} a área ${filtro.value} produziu  um total de ${vetProd[contadora]} sacas, tendo uma média de ${vetDivisor[contadora].toFixed(2)} sacas/ha`
                 contadora++;
                 ano++;
             }
         }
-        outFiltro.innerHTML += `<br> <br> A área ${filtro.value} tem um total de ${vetSetor[0]}ha, juntando todas as safras produziu um total de ${prodTotal} sacas e tendo uma média total de${(mediaTotal/10).toFixed(2)} sacas/ha`
+    }
+    if (flag == 0) {
+        outFiltro.innerHTML = `Não existe essa área na fazenda`;
+    } else {
+        outFiltro.innerHTML += `<br> <br>Lembrete: A área ${filtro.value} tem um total de ${vetSetor[0]}ha`
     }
 }
 

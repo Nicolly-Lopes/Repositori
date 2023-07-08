@@ -22,7 +22,7 @@ header {
 nav {
   position: absolute;
   top: 6.9em;
-  padding-right: 9.4em;
+  padding-right: 12em;
   right: 0;
 }
 
@@ -34,7 +34,7 @@ nav ul {
 }
 
 nav li {
-  margin-left: 2em;
+  margin-left: 3em;
 }
 
 nav a {
@@ -52,11 +52,43 @@ nav a:hover {
 
 .caixa {
   position: relative;
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
 }
 
-/*---------------------------------------------------Conteudo Pruncipal---------------------------------------------------------*/
+.linkMapa {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.circulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.circulo:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.2s all;
+  background: #D2691E;
+}
+
+.circulo:active {
+  transition: 0.2s all;
+  background: #eea16a;
+}
+
+.iconeMapa {
+  width: 30px;
+  height: 30px;
+}
+
+
 
 /*---------------------------------------------------Conteudo Principal---------------------------------------------------------*/
 
@@ -65,19 +97,12 @@ main {
   margin: 0 auto;
 }
 
-.titulo-secundario {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 1em;
-  font-family: 'Libre Baskerville', sans-serif;
-}
-
 /*Animação do titulo "Fazenda Recanto Grande"*/
 .imagem-principal {
   position: relative;
 }
 
-.imagem-graos {
+.imagem-folhas {
   width: 100%;
   padding-bottom: 1.3em;
 }
@@ -85,7 +110,7 @@ main {
 .titulo-principal {
   font-family: 'Libre Baskerville', sans-serif;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
@@ -112,11 +137,49 @@ main {
   }
 }
 
-h1 {
+.titulo-secundario {
+  font-family: 'Arvo', sans-serif;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.titulo {
   font-size: 30px;
-  margin-top: 100px;
+  margin-top: 10px;
   padding-bottom: 50px;
   text-transform: uppercase;
+  text-align: center;
+}
+
+#frasePrincipal {
+  padding-bottom: 70px;
+  line-height: 30px;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 
@@ -150,7 +213,8 @@ h1 {
 }
 
 /*Texto e imagem sobre a fazenda */
-.texto{
+.texto {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.4);
   width: 500px;
   height: 600px;
   padding: 40px;
@@ -163,7 +227,8 @@ h1 {
   z-index: 2;
 }
 
-.imagem-cafeComSol{
+.imagem-cafeComSol {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.4);
   width: 600px;
   height: 650px;
   max-width: 100%;
@@ -177,7 +242,7 @@ h1 {
 
 .principal {
   margin-top: 50px;
-  height: 800px;
+  height: 1100px;
 }
 
 .principal p {
@@ -235,12 +300,99 @@ h1 {
   }
 }
 
+.animacao-letras {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-top: 10px;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.letra {
+  transition: 0.4s;
+  transform: translateX(0);
+  cursor: grab;
+  color: black;
+}
+
+.letra:hover {
+  transform: translateY(-1rem);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(120deg, hsl(19, 90%, 52%), hsl(56, 100%, 50%));
+}
+
+
+
+
+
+
+.tipo-graos {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  padding-left: 11%;
+  padding-bottom: 100px;
+}
+
+
+.imagem-texto {
+  position: relative;
+  display: inline-block;
+}
+
+.texto-graos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Define a cor de fundo para escurecer a imagem */
+  opacity: 0;
+  /* Inicialmente, o texto está invisível */
+  transition: opacity 0.3s ease;
+  /* Adiciona uma transição suave */
+  text-align: justify;
+  border-radius: 30px;
+}
+
+.texto-graos p {
+  color: white;
+  font-size: 22px;
+  margin: 40px;
+  text-indent: 2em;
+  line-height: 1.2em;
+}
+
+
+
+
+.imagem-texto:hover .texto-graos {
+  cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+  border-radius: 30px;
+}
+
+
+.imagem-graos {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 30px;
+}
+
 /*Carrossel de imagens*/
 .galeria-imagens {
   display: flex;
   height: 15rem;
   gap: 1rem;
-  padding: 20px 40px;
+  padding: 20px 200px;
 }
 
 .galeria-imagens>div {

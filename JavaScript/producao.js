@@ -33,7 +33,6 @@ const sltSafra = document.getElementById("sltSafra");
 const divSafra = document.getElementById("divSafra");
 const inMedia = document.getElementById("inMedia");
 const btMostrar = document.getElementById("btMostrar");
-const outResultado = document.getElementById("outResultado");
 const outMenorMedia = document.getElementById("outMenorMedia");
 const btMenorProd = document.getElementById("btMenorProd");
 const outMenorProd = document.getElementById("outMenorProd");
@@ -59,10 +58,15 @@ function identificar() {
     if (frase) {
         frase.remove();
     }
-   
+
+    //referência a tabela e cria o cabeçalho
+    const tabela = document.getElementById("tabela");
+    tabela.innerHTML = "";
+    const cabecalhoTabela = `<tr><th>ID</th><th>Área (ha)</th><th>Sacas</th><th>Produtividade (sacas/ha)</th></tr>`;
+    tabela.innerHTML = cabecalhoTabela;
 
     outMenorMedia.innerHTML = "";
-    outResultado.innerHTML = "";
+
     outMenorProd.innerHTML = "";
     outMaiorProd.innerHTML = "";
     inMedia.value = "";
@@ -86,10 +90,12 @@ function identificar() {
     for (var contadora = safra; contadora < vetSacaAux.length; contadora += 10) {
         mediaProducao = vetSacaAux[contadora] / vetAreaVazio[contadora];
         vetMedia.push(mediaProducao);
-        
-        outResultado.innerHTML += `<br>Área ${vetIDAux[soma]} com tamanho de ${vetAreaVazio[contadora]} ha produziu um total de ${vetSacaAux[contadora]} sacas tendo uma média de  ${mediaProducao.toFixed(2)}`;
 
-       
+
+        //cria as linhas da tabela
+        const linha = `<tr><td>${vetIDAux[soma]}</td><td>${vetAreaVazio[contadora]} </td><td>${vetSacaAux[contadora]}</td><td> ${mediaProducao.toFixed(2)}</td></tr>`;
+        tabela.innerHTML += linha;
+
         soma++;
     }
 
@@ -107,7 +113,7 @@ function menorProd() {
 
         for (var ind = 1; ind < vetMedia.length; ind++) {
             if (vetMedia[ind] < vetMedia[indMenor]) {
-                indMenor = ind;  
+                indMenor = ind;
             }
         }
         outMenorProd.innerHTML = ` ${vetIDAux[indMenor]} com ${vetMedia[indMenor].toFixed(2)} sacas/ha`;
