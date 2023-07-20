@@ -1,10 +1,11 @@
-const outFiltro = document.getElementById("outFiltro");
+var outFiltro = document.getElementById("outFiltro");
 const filtro = document.querySelector('.inBarraPesquisa');
 
 filtro.addEventListener('input', function () {
     if (filtro.value === "") {
         outFiltro.innerHTML = '';
         filtro.focus();
+        cabecalhoTabela.innerHTML = "";
     }
 });
 
@@ -17,15 +18,19 @@ filtro.addEventListener('keypress', function (event) {
 btPesquisar.addEventListener("click", pesquisarArea);
 
 function pesquisarArea() {
+    const cabecalhoTabela = document.getElementById("cabecalhoTabela");
+    cabecalhoTabela.innerHTML = "";
+    const cabecalho = `<tr><th>Safra</th><th>ID</th><th>Área (ha)</th><th>Sacas</th><th>Produtividade (sacas/ha)</th></tr>`;
+    cabecalhoTabela.innerHTML = cabecalho;
+
     var opMaiuscula = filtro.value
     var flag = 0;
+    outFiltro.innerHTML = "";
 
     frase2 = document.getElementById("titulo2")
     if (frase2) {
         frase2.remove();
     }
-
-    outFiltro.innerHTML = "";
 
     if (filtro.value == "") {
         alert("Você precisa digitar o nome de uma área!");
@@ -45,16 +50,36 @@ function pesquisarArea() {
                 vetProd.push(vetSacas[ind]);
                 divisor = vetProd[contadora] / vetSetor[contadora];
                 vetDivisor.push(divisor);
-                outFiltro.innerHTML += `<br> No ano de ${ano} a área ${filtro.value} produziu  um total de ${vetProd[contadora]} sacas, tendo uma média de ${vetDivisor[contadora].toFixed(2)} sacas/ha`
+                
+                var safra = document.createElement("td")
+                var id = document.createElement("td")
+                var hectares = document.createElement("td")
+                var sacas = document.createElement("td")
+                var produtividade = document.createElement("td")
+                var tr = document.createElement("tr")
+
+                safra.innerHTML = ano;
+                id.innerHTML = opMaiuscula;
+                hectares.innerHTML = vetSetor[0];
+                sacas.innerHTML = vetProd[contadora];
+                produtividade.innerHTML = vetDivisor[contadora].toFixed(2);
+
+                tr.appendChild(safra);
+                tr.appendChild(id);
+                tr.appendChild(hectares);
+                tr.appendChild(sacas);
+                tr.appendChild(produtividade);
+                outFiltro.appendChild(tr);
+
                 contadora++;
                 ano++;
             }
         }
     }
+
     if (flag == 0) {
-        outFiltro.innerHTML = `Não existe essa área na fazenda`;
-    } else {
-        outFiltro.innerHTML += `<br> <br>Lembrete: A área ${filtro.value} tem um total de ${vetSetor[0]}ha`
+        cabecalhoTabela.innerHTML = "";
+        outFiltro.innerHTML = `Não existe essa área na fazenda!`;
     }
 }
 

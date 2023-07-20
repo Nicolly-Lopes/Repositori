@@ -15,7 +15,6 @@ header {
 
 .logo {
   width: 12.5em;
-  height: 12.5em;
   padding: 0 9.4em;
 }
 
@@ -27,13 +26,13 @@ nav {
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
 nav li {
+  display: inline;
   margin-left: 3em;
 }
 
@@ -57,40 +56,22 @@ nav a:hover {
 }
 
 .linkMapa {
-  display: inline-block;
+  display: inline;
   text-decoration: none;
 }
 
-.circulo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #fff;
-}
-
-.circulo:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-  transition: 0.2s all;
-  background: #D2691E;
-}
-
-.circulo:active {
-  transition: 0.2s all;
-  background: #eea16a;
-}
-
 .iconeMapa {
-  width: 30px;
   height: 30px;
 }
 
+.iconeMapa:hover {
+  cursor: pointer;
+  /*Aumenta o tamanho do elemento mantendo sua proporção*/
+  transform: scale(1.2);
+  transition: 0.2s all;
+}
 
-
-/*---------------------------------------------------Conteudo Principal---------------------------------------------------------*/
+/*---------------------------------------------------Conteúdo Principal---------------------------------------------------------*/
 
 main {
   width: 100%;
@@ -104,73 +85,48 @@ main {
 
 .imagem-folhas {
   width: 100%;
-  padding-bottom: 1.3em;
 }
 
-.titulo-principal {
+.titulo-principal, .titulo-secundario {
   font-family: 'Libre Baskerville', sans-serif;
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /*Foi usado para centralizar o titulo em relação a imagem principal*/
   color: #fff;
   font-size: 4em;
-  /* Tamanho da fonte aumentado para 48 pixels */
   font-weight: bold;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
-  /* Sombra de texto mais proeminente */
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /*Adiciona uma sombra no texto*/
   opacity: 0;
-  animation-name: fade;
+  animation-name: fade; /*Define o nome da animação que será criada usando Keyframes*/
   animation-duration: 1s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-  z-index: 1;
-}
-
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+  animation-delay: 0.5s; /*Indica que a animação começará após meio segundo*/
+  animation-fill-mode: forwards; /*O elemento mantém as alterações feitas pela animação ao final dela*/
+  z-index: 1; /*Informa que o titulo deve ficar na sobreposto em relação a imagem*/
 }
 
 .titulo-secundario {
   font-family: 'Arvo', sans-serif;
-  position: absolute;
   top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
   font-size: 2em;
-  font-weight: bold;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  animation-name: fade;
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-  z-index: 1;
 }
 
+/*Faz o titulo aparecer gradualmente*/
 @keyframes fade {
   0% {
-    opacity: 0;
+    opacity: 0; /*Indica que no começo da animação o titulo ficará transparente*/
   }
 
   100% {
-    opacity: 1;
+    opacity: 1; /*Após o final da animação o título ficará totalmente visível*/
   }
 }
-
 
 .titulo {
   font-size: 30px;
   margin-top: 10px;
   padding-bottom: 50px;
-  text-transform: uppercase;
+  text-transform: uppercase; /*Deixa as letras maiúsculas*/
   text-align: center;
 }
 
@@ -184,7 +140,7 @@ main {
 
 
 /*Mensagem de cookies*/
-.cookie-message {
+.mensagem-cookies {
   position: fixed;
   text-align: center;
   bottom: 0;
@@ -193,13 +149,10 @@ main {
   background-color: #f2f2f2;
   padding: 10px;
   display: none;
+  z-index: 3;
 }
 
-.cookie-message p {
-  margin: 0;
-}
-
-.cookie-message button {
+.mensagem-cookies button {
   margin-top: 30px;
   background-color: #4CAF50;
   color: white;
@@ -233,7 +186,7 @@ main {
   height: 650px;
   max-width: 100%;
   max-height: 100%;
-  object-fit: cover;
+  object-fit: cover; /*Ajusta a imagem para a largura de 600px e altura de 650px*/
   position: relative;
   margin-left: 400px;
   z-index: 1;
@@ -247,13 +200,9 @@ main {
 
 .principal p {
   font-size: 20px;
-  line-height: 1em;
+  line-height: 1.3em;
   margin-bottom: 1em;
   text-align: justify;
-}
-
-.principal em {
-  font-style: italic;
 }
 
 /*Animação com os tópicos referentes aos valores e objetivos da fazenda*/
@@ -271,11 +220,10 @@ main {
 }
 
 .valores {
-  display: inline-block;
   font-size: 20px;
   text-align: center;
   opacity: 1;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out; /*Controla a opacidade do elemento variando de 0 a 1, durante o.3 segundos. "ease-in-out" significa que a transição terá uma aceleração suave no início e no final*/
 }
 
 .valores:hover {
@@ -300,6 +248,7 @@ main {
   }
 }
 
+/*Animação das palvras "Arábica" e "conilon"*/
 .animacao-letras {
   display: flex;
   align-items: center;
@@ -328,10 +277,7 @@ main {
 }
 
 
-
-
-
-
+/*Imagens sobre os tipos de grãos*/
 .tipo-graos {
   display: inline-block;
   text-align: center;
@@ -370,9 +316,6 @@ main {
   line-height: 1.2em;
 }
 
-
-
-
 .imagem-texto:hover .texto-graos {
   cursor: pointer;
   visibility: visible;
@@ -387,7 +330,8 @@ main {
   border-radius: 30px;
 }
 
-/*Carrossel de imagens*/
+
+/*Galeria de imagens*/
 .galeria-imagens {
   display: flex;
   height: 15rem;
@@ -408,11 +352,7 @@ main {
   flex: 5;
 }
 
-
-
-
 /*------------------------------------------------------------------footer-----------------------------------------------------------------*/
-
 footer {
   text-align: center;
   background-color: #015641;
@@ -422,4 +362,5 @@ footer {
 .copyright {
   color: #FFFFFF;
   font-size: 13px;
+  padding-bottom: 15px;
 }

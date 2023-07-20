@@ -32,8 +32,6 @@
     <main>
         <section class="conteudo-site">
 
-            <!------------------------------Página com as informações de cada safra:------------------------------------>
-            <!------------------------------Página com as informações de cada safra:------------------------------------>
             <section id="select">
                 <h1 id="titulo-conteudo">Gerenciamento das Áreas de Produção</h1>
 
@@ -52,24 +50,25 @@
                 </select>
             </section>
 
-            <section>
-                <div class="tamanhoPagina">
-                    <div id="conteudo-1" class="conteudo">
-                        <div class="imagem-producao"><img class="imagem-producao"
-                                src="./Imagens-Geral/imagem-producao.png"></div>
 
-                        <fieldset class="informacao-safra">
-                            <div id="divSafra">
-                                <h2 id="titulo">Selecione uma <strong>safra</strong> <br>para mais informações!</p>
-                            </div>
-                            <!--A tabela será criada usando javaScript-->
-                            <table id="tabela"></table>
-                        </fieldset>
+            <!------------------------------Página com as informações de cada safra:------------------------------------>
+            <section>
+                <div id="conteudo-1" class="conteudo">
+                    <div class="imagem-producao"><img class="imagem-producao" src="./Imagens-Geral/imagem-producao.png">
                     </div>
+
+                    <fieldset class="informacao-safra">
+                        <div id="divSafra">
+                            <h2 id="titulo">Selecione uma <strong>safra</strong> <br>para mais informações!</p>
+                        </div>
+                        <!--A tabela será criada usando javaScript-->
+                        <table id="tabela"></table>
+                    </fieldset>
                 </div>
             </section>
 
-            <!-------------------Página que informa a área com menor e maior produtividade dsa safra:------------------>
+
+            <!-------------------Página que informa a área com maior produtividade dsa safra:--------------------->
             <section>
 
                 <div id="conteudo-2" class="conteudo">
@@ -94,9 +93,9 @@
 
                     <h4>Área com maior produtividade da safra:</h4>
 
-                    <p>Maior produtividade da safra<input type="button" value="Buscar 🔍" id="btMaiorProd"></p>
+                    <p>Maior produtividade da safra<input type="button" value="Buscar 🔍" id="btMaiorProd" class="button"></p>
 
-                    <h3 id="outMaiorProd"></h3>
+                    <h3 id="outMaiorProd" class="paragrafoSaida"></h3>
                 </div>
             </section>
 
@@ -110,24 +109,22 @@
 
                     <label>Buscar áreas com produtividade menores que:<input type="number" placeholder="Buscar áreas"
                             id="inMedia" required></label>
-                    <input type="button" value="Buscar 🔍" id="btMostrar">
-                    <h3 id="outMenorMedia"></h3>
+                    <input type="button" value="Buscar 🔍" id="btMostrar" class="button">
+                    <h3 id="outMenorMedia" class="paragrafoSaida"></h3>
                 </div>
 
             </section>
 
 
-            <!-----------------Página que informa a produtividade de uma área em todas as safras:---------------------->
+            <!---------------------Página que informa a área com menor produtividade da safra:-------------------------->
             <section>
                 <div id="conteudo-4" class="conteudo">
                     <div class="imagem-producao"><img src="./Imagens-Geral/figura3.png"></div>
 
                     <h4>Área com menor produtividade da safra:</h4>
-                    <p>Menor produtividade da safra<input type="button" value="Buscar 🔍" id="btMenorProd"></p>
+                    <p>Menor produtividade da safra<input type="button" value="Buscar 🔍" id="btMenorProd" class="button"></p>
 
-                    <h3 id="outMenorProd"></h3>
-
-
+                    <h3 id="outMenorProd" class="paragrafoSaida"></h3>
                 </div>
             </section>
 
@@ -156,17 +153,17 @@
                             <option value="V49"></option>
                         </datalist>
                     </label>
-                    <input type="button" value="Buscar 🔎" id="btPesquisar">
+                    <input type="button" value="Buscar 🔎" id="btPesquisar" class="button">
 
 
-                    <h2 id="titulo2">Selecione uma <strong>área</strong> <br>para mais informações!</p>
+                    <h2 id="titulo2">Selecione uma <strong>área</strong> <br>para mais informações!</h2>
 
-                        <h3 id="outFiltro"></h3>
+                        <table class="tabela">
+                            <thead id="cabecalhoTabela"></thead>
+                            <tbody id="outFiltro"></tbody>
+                        </table>
                 </div>
-
-
             </section>
-
 
         </section>
     </main>

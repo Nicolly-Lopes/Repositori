@@ -23,12 +23,12 @@ function mostrarConteudo(conteudoId) {
 window.onload = function () {
     var divInicial = document.getElementById("conteudo-1");
     divInicial.style.display = "block";
-};
+}
 
 
 
 
-//----------------------------------conteudo do site------------------------------------------------------------------------
+//----------------------------------conteúdo do site------------------------------------------------------------------------
 const sltSafra = document.getElementById("sltSafra");
 const divSafra = document.getElementById("divSafra");
 const inMedia = document.getElementById("inMedia");
@@ -66,7 +66,6 @@ function identificar() {
     tabela.innerHTML = cabecalhoTabela;
 
     outMenorMedia.innerHTML = "";
-
     outMenorProd.innerHTML = "";
     outMaiorProd.innerHTML = "";
     inMedia.value = "";
@@ -81,8 +80,8 @@ function identificar() {
     for (var indAux = 0; indAux < vetIDAux.length; indAux++) {
         for (var ind = 0; ind < vetArea.length; ind++) {
             if (vetIDAux[indAux] == vetID[ind]) {
-                vetAreaVazio.push(vetArea[ind])
-                vetSacaAux.push(vetSacas[ind])
+                vetAreaVazio.push(vetArea[ind]);
+                vetSacaAux.push(vetSacas[ind]);
             }
         }
     }
@@ -98,9 +97,7 @@ function identificar() {
 
         soma++;
     }
-
 }
-
 
 
 btMenorProd.addEventListener("click", menorProd);
@@ -123,7 +120,6 @@ function menorProd() {
 
 btMaiorProd.addEventListener("click", maiorProd);
 function maiorProd() {
-
     if (sltSafra.value == "") {
         alert("Você precisa selecionar uma safra!");
     } else {
@@ -163,7 +159,6 @@ function mostrarMedia() {
                 outMenorMedia.innerHTML += `${virgula} ${vetIDAux[i]}`
                 flag++;
                 virgula = ", ";
-
             }
         }
         if (flag == 0) {
