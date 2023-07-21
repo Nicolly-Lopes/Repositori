@@ -1,9 +1,12 @@
+const cabecalhoTabela = document.getElementById("cabecalhoTabela");
 var outFiltro = document.getElementById("outFiltro");
+var outFiltroMensagem = document.getElementById("outFiltroMensagem");
 const filtro = document.querySelector('.inBarraPesquisa');
 
 filtro.addEventListener('input', function () {
     if (filtro.value === "") {
         outFiltro.innerHTML = '';
+        outFiltroMensagem.innerHTML = '';
         filtro.focus();
         cabecalhoTabela.innerHTML = "";
     }
@@ -18,14 +21,32 @@ filtro.addEventListener('keypress', function (event) {
 btPesquisar.addEventListener("click", pesquisarArea);
 
 function pesquisarArea() {
-    const cabecalhoTabela = document.getElementById("cabecalhoTabela");
-    cabecalhoTabela.innerHTML = "";
-    const cabecalho = `<tr><th>Safra</th><th>ID</th><th>Área (ha)</th><th>Sacas</th><th>Produtividade (sacas/ha)</th></tr>`;
-    cabecalhoTabela.innerHTML = cabecalho;
+    //Cria o cabeçalho da tabela
+    var safraCabecalho = document.createElement("th");
+    var idCabecalho = document.createElement("th");
+    var hectaresCabecalho = document.createElement("th");
+    var sacasCabecalho = document.createElement("th");
+    var produtividadeCabecalho = document.createElement("th");
+    var trCabecalho = document.createElement("tr");
+
+    safraCabecalho.innerHTML = "Safra";
+    idCabecalho.innerHTML = "ID";
+    hectaresCabecalho.innerHTML = "Área (ha)";
+    sacasCabecalho.innerHTML = "Sacas";
+    produtividadeCabecalho.innerHTML = "Produtividade <br>Safra/ha";
+
+    trCabecalho.appendChild(safraCabecalho);
+    trCabecalho.appendChild(idCabecalho);
+    trCabecalho.appendChild(hectaresCabecalho);
+    trCabecalho.appendChild(sacasCabecalho);
+    trCabecalho.appendChild(produtividadeCabecalho);
+    cabecalhoTabela.appendChild(trCabecalho);
+
 
     var opMaiuscula = filtro.value
     var flag = 0;
     outFiltro.innerHTML = "";
+    outFiltroMensagem.innerHTML = "";
 
     frase2 = document.getElementById("titulo2")
     if (frase2) {
@@ -50,13 +71,14 @@ function pesquisarArea() {
                 vetProd.push(vetSacas[ind]);
                 divisor = vetProd[contadora] / vetSetor[contadora];
                 vetDivisor.push(divisor);
-                
-                var safra = document.createElement("td")
-                var id = document.createElement("td")
-                var hectares = document.createElement("td")
-                var sacas = document.createElement("td")
-                var produtividade = document.createElement("td")
-                var tr = document.createElement("tr")
+
+                //Corpo da tabela
+                var safra = document.createElement("td");
+                var id = document.createElement("td");
+                var hectares = document.createElement("td");
+                var sacas = document.createElement("td");
+                var produtividade = document.createElement("td");
+                var tr = document.createElement("tr");
 
                 safra.innerHTML = ano;
                 id.innerHTML = opMaiuscula;
@@ -79,7 +101,6 @@ function pesquisarArea() {
 
     if (flag == 0) {
         cabecalhoTabela.innerHTML = "";
-        outFiltro.innerHTML = `Não existe essa área na fazenda!`;
+        outFiltroMensagem.innerHTML = `Não existe essa área na fazenda!`;
     }
 }
-

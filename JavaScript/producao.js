@@ -59,11 +59,27 @@ function identificar() {
         frase.remove();
     }
 
-    //referência a tabela e cria o cabeçalho
+    //referência a tabela
     const tabela = document.getElementById("tabela");
     tabela.innerHTML = "";
-    const cabecalhoTabela = `<tr><th>ID</th><th>Área (ha)</th><th>Sacas</th><th>Produtividade (sacas/ha)</th></tr>`;
-    tabela.innerHTML = cabecalhoTabela;
+
+    //Cria o cabeçalho da tabela
+    var idThead = document.createElement("th");
+    var hectaresThead = document.createElement("th");
+    var sacasThead = document.createElement("th");
+    var produtividadeThead = document.createElement("th");
+    var linhaCabecalho = document.createElement("tr");
+
+    idThead.innerHTML = "ID";
+    hectaresThead.innerHTML = "Área (ha)";
+    sacasThead.innerHTML = "Sacas";
+    produtividadeThead.innerHTML = "Produtividade <br>Safra/ha";
+
+    linhaCabecalho.appendChild(idThead);
+    linhaCabecalho.appendChild(hectaresThead);
+    linhaCabecalho.appendChild(sacasThead);
+    linhaCabecalho.appendChild(produtividadeThead);
+    tabela.appendChild(linhaCabecalho);
 
     outMenorMedia.innerHTML = "";
     outMenorProd.innerHTML = "";
@@ -90,10 +106,23 @@ function identificar() {
         mediaProducao = vetSacaAux[contadora] / vetAreaVazio[contadora];
         vetMedia.push(mediaProducao);
 
+        //cria o corpo da tabela
+        var idCorpo = document.createElement("td");
+        var hectaresCorpo = document.createElement("td");
+        var sacasCorpo = document.createElement("td");
+        var produtividadeCorpo = document.createElement("td");
+        var linhaTabela = document.createElement("tr");
 
-        //cria as linhas da tabela
-        const linha = `<tr><td>${vetIDAux[soma]}</td><td>${vetAreaVazio[contadora]} </td><td>${vetSacaAux[contadora]}</td><td> ${mediaProducao.toFixed(2)}</td></tr>`;
-        tabela.innerHTML += linha;
+        idCorpo.innerHTML = vetIDAux[soma];
+        hectaresCorpo.innerHTML = vetAreaVazio[contadora];
+        sacasCorpo.innerHTML = vetSacaAux[contadora];
+        produtividadeCorpo.innerHTML = mediaProducao.toFixed(2);
+
+        linhaTabela.appendChild(idCorpo);
+        linhaTabela.appendChild(hectaresCorpo);
+        linhaTabela.appendChild(sacasCorpo);
+        linhaTabela.appendChild(produtividadeCorpo);
+        tabela.appendChild(linhaTabela);
 
         soma++;
     }
