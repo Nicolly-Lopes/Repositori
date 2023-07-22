@@ -1,3 +1,61 @@
+#tabela {
+    width: 90%;
+    margin: 50px 0 0 20px;
+    table-layout: fixed;
+}
+
+ 
+</table>
+ 
+ class="paragrafoSaida"
+ 
+       <!--A tabela será criada usando javaScript-->
+                        <table id="tabela">
+ 
+        //cria o corpo da tabela
+        var idCorpo = document.createElement("td");
+        var hectaresCorpo = document.createElement("td");
+        var sacasCorpo = document.createElement("td");
+        var produtividadeCorpo = document.createElement("td");
+        var linhaTabela = document.createElement("tr");
+        var corpo = document.createElement("tbody");
+
+        idCorpo.innerHTML = vetIDAux[contadora];
+        hectaresCorpo.innerHTML = vetAreaVazio[ind];
+        sacasCorpo.innerHTML = vetSacaAux[ind];
+        produtividadeCorpo.innerHTML = mediaProducao.toFixed(2);
+
+        linhaTabela.appendChild(idCorpo);
+        linhaTabela.appendChild(hectaresCorpo);
+        linhaTabela.appendChild(sacasCorpo);
+        linhaTabela.appendChild(produtividadeCorpo);
+        corpo.appendChild(linhaTabela);
+        tabela.appendChild(corpo);
+ 
+    //referência a tabela
+    const tabela = document.getElementById("tabela");
+    tabela.innerHTML = "";
+
+    //Cria o cabeçalho da tabela
+    var idThead = document.createElement("th");
+    var hectaresThead = document.createElement("th");
+    var sacasThead = document.createElement("th");
+    var produtividadeThead = document.createElement("th");
+    var linhaCabecalho = document.createElement("tr");
+    var cabecalho = document.createElement("thead");
+
+    idThead.innerHTML = "ID";
+    hectaresThead.innerHTML = "Área (ha)";
+    sacasThead.innerHTML = "Sacas";
+    produtividadeThead.innerHTML = "Produtividade <br>Safra/ha";
+
+    linhaCabecalho.appendChild(idThead);
+    linhaCabecalho.appendChild(hectaresThead);
+    linhaCabecalho.appendChild(sacasThead);
+    linhaCabecalho.appendChild(produtividadeThead);
+    cabecalho.appendChild(linhaCabecalho);
+    tabela.appendChild(cabecalho);
+ 
     //O conteudoAtual recebe o valor do conteudoId para saber qual conteúdo está sendo exibido atualmente
  
     //O (conteudoId) pega o valor que está dentro do parênteses da função quando o usuário clica em um dos links do cabeçalho
