@@ -3,6 +3,7 @@ var outFiltro = document.getElementById("outFiltro");
 var outFiltroMensagem = document.getElementById("outFiltroMensagem");
 const filtro = document.querySelector('.inBarraPesquisa');
 
+// Botão de limpeza
 filtro.addEventListener('input', function () {
     if (filtro.value === "") {
         outFiltro.innerHTML = '';
@@ -12,6 +13,7 @@ filtro.addEventListener('input', function () {
     }
 });
 
+// atalho do botão
 filtro.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
         pesquisarArea();

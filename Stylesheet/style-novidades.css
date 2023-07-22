@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Libre+Baskerville:ital@1&family=Montserrat:ital,wght@0,100;0,200;1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?família=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;1,100&display=swap');
+
+body {
+  font-family: 'Arvo', sans-serif;
+}
+
+/* --------------------------------------------------header------------------------------------------------------------------------*/
+
+header {
+  width: 100%;
+  background: #015641;
+  padding: 1.3em 0;
+}
+
+.logo {
+  width: 12.5em;
+  padding: 0 9.4em;
+}
+
+nav {
+  position: absolute;
+  top: 6.9em;
+  padding-right: 12em;
+  right: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  display: inline;
+  margin-left: 3em;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #D2691E;
+  text-decoration: underline;
+}
+
+.caixa {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.linkMapa {
+  display: inline;
+  text-decoration: none;
+}
+
+.iconeMapa {
+  height: 30px;
+}
+
+.iconeMapa:hover {
+  cursor: pointer;
+  /*Aumenta o tamanho do elemento mantendo sua proporção*/
+  transform: scale(1.2);
+  transition: 0.2s all;
+}
+
+/* --------------------------------------------------main------------------------------------------------------------------------*/
+.imagem-lavoura {
+  width: 100%;
+}
+
+.imagem-principal {
+  position: relative;
+}
+
+.titulo-principal,
+.titulo-secundario {
+  font-family: 'Libre Baskerville', sans-serif;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Foi usado para centralizar o titulo em relação a imagem principal */
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  /* Adiciona uma sombra no texto */
+  z-index: 1;
+  /* Informa que o titulo deve ficar na sobreposto em relação a imagem */
+
+  width: 100%;
+  /* O título ocupará a largura inteira da página */
+  text-align: center;
+  /* Centraliza o texto horizontalmente */
+}
+
+.titulo-secundario {
+  font-family: 'Arvo', sans-serif;
+  top: 60%;
+  font-size: 2em;
+  width: 100%;
+  /* O título ocupará a largura inteira da página */
+  text-align: center;
+  /* Centraliza o texto horizontalmente */
+}
+
+hr {
+  margin: 40px 0;
+}
+
+.conteudoSite {
+  text-align: center;
+  width: 65%;
+  margin: auto;
+  line-height: 2;
+}
+
+.conteudoSite h4 {
+  font-family: 'Arvo', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.conteudoSite h3 {
+  font-family: 'Libre Baskerville', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.conteudoSite h2 {
+  font-family: 'Libre Baskerville', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.conteudoSite h1 {
+  font-family: 'Arvo', sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.conteudoSite p {
+  padding: 40px 0;
+  line-height: 30px;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.conteudoSite ul {
+  font-size: 17px;
+  list-style-type: disc;
+  text-align: justify;
+  margin: 0 200px;
+}
+
+.imagem {
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.imgBeneficios {
+  width: 60%;
+  margin: 20px 0;
+}
+
+/* Animação das redes socias */
+.navbar {
+  padding-top: 10px;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.box {
+  display: inline-block;
+  padding: 18px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .4s ease;
+}
+
+.box:hover {
+  transform: translateX(20px);
+}
+
+.box:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 140px;
+  height: 100%;
+  background-color: #c32aa3;
+  border-radius: 35px;
+  transition: all .4s ease;
+}
+
+.box:hover .icon {
+  background: #fff;
+  color: #3b3b3b;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.box:nth-child(2):hover::before {
+  background: #25d366;
+}
+
+.box:nth-child(2):hover .icon {
+  background: #fff;
+  color: #3b3b3b;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.navbar p {
+  transform: translate(70px);
+}
+
+.box .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .4s ease;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.icon-instagram {
+  background-color: #c32aa3;
+  border-radius: 50%;
+}
+
+.icon-instagram::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("https://cdn.jsdelivr.net/npm/ionicons@5.4.0/dist/ionicons/svg/logo-instagram.svg");
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-whatsapp {
+  background-color: #25d366;
+  border-radius: 50%;
+}
+
+.icon-whatsapp::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("https://cdn.jsdelivr.net/npm/ionicons@5.4.0/dist/ionicons/svg/logo-whatsapp.svg");
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-container .box {
+  margin: 10px 0;
+}
+
+
+/*------------------------------------------------------------------footer-----------------------------------------------------------------*/
+footer {
+  margin-top: 25px;
+  text-align: center;
+  background-color: #015641;
+  padding: 10px 0;
+}
+
+.copyright {
+  color: #FFFFFF;
+  font-size: 13px;
+  padding-bottom: 15px;
+}

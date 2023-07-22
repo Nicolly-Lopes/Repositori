@@ -1,3 +1,139 @@
+    //O conteudoAtual recebe o valor do conteudoId para saber qual conteúdo está sendo exibido atualmente
+ 
+    //O (conteudoId) pega o valor que está dentro do parênteses da função quando o usuário clica em um dos links do cabeçalho
+ 
+soma
+ 
+var vetID = ['R72', 'A15', 'R40', 'S96', 'A22', 'A74', 'M16', 'A15', 'M16', 'A15', 'M16', 'O47', 'R40', 'S96', 'A74', 'S96', 'A15', 'L87', 'O47', 'S96', 'V49', 'V49', 'V49', 'A74', 'R40', 'A74', 'R72', 'O47', 'S96', 'V49', 'R72', 'M16', 'A22', 'M16', 'M16', 'R72', 'A15', 'R72', 'A22', 'A74', 'S96', 'A22', 'V49', 'A22', 'A22', 'A22', 'O47', 'A15', 'A74', 'V49', 'A22', 'S96', 'M16', 'A74', 'R40', 'L87', 'A22', 'R40', 'L87', 'L87', 'A15', 'L87', 'O47', 'R72', 'L87', 'R72', 'V49', 'A15', 'R40', 'O47', 'M16', 'V49', 'O47', 'L87', 'R40',
+ 
+'M16', 'M16', 'L87', 'A22', 'S96', 'R40', 'A74', 'A15', 'R72', 'A74', 'O47', 'R72', 'L87', 'V49', 'V49', 'S96', 'O47', 'R40', 'R72', 'R40', 'A74', 'S96', 'A15', 'L87', 'O47'];
+
+var vetArea = [100, 50, 80, 70, 60, 90, 120, 50, 120, 50, 120, 110, 80, 70, 90, 70, 50, 75, 110, 70, 95, 95, 95, 90, 80, 90, 100, 110, 70, 95, 100, 120, 60, 120, 120, 100, 50, 100, 60, 90, 70, 60, 95, 60, 60, 60, 110, 50, 90, 95, 60, 70, 120, 90, 80, 75, 60, 80, 75, 75, 50, 75, 110, 100, 75, 100, 95, 50, 80, 110, 120, 95, 110, 75, 80, 120, 120, 75, 60, 70, 80, 90, 50, 100, 90, 110, 100, 75, 95, 95, 70, 110, 80, 100, 80, 90, 70, 50, 75, 110];
+
+var vetSacas = [3002, 1472, 2366, 2002, 1865, 2610, 3662, 1587, 3517, 1519, 3662, 3380, 2383, 2184, 2792, 2129, 1506, 2223, 3317, 2024, 2779, 2838, 2775, 2701, 2303, 2787, 3067, 3217, 2075, 2772, 2957, 3578, 1773, 3537, 3517, 2906, 1447, 2989, 1815, 2740, 2179, 1721, 2908, 1733, 1784, 1852, 3280, 1434, 2606, 2818, 1744, 2025, 3668, 2714, 2462, 2168, 1700, 2477, 2336, 2285, 1564, 2292, 3285, 2981, 2231, 3026, 2767, 1529, 2454, 3335, 3511, 2924, 3399, 2195, 2373, 3683, 3652, 2215, 1808, 2136, 2500, 2778, 1463, 3098, 2773, 3328, 3077, 2349, 2939, 2838, 2089, 3382, 2416, 2907, 2461, 2678, 2111, 1511, 2346, 3264];
+ 
+.requisitos {
+  text-align: center;
+}
+
+ 
+margin: 0 100px;
+ 
+ class="requisitos"
+ 
+.requisitos {
+ 
+}
+ 
+ class="requisitos"
+ 
+.requisitos {
+ 
+  list-style-type: disc;
+  
+}
+ 
+  ul {
+ 
+  }
+ 
+     <hr>
+ 
+  margin-bottom: 0;
+ 
+ <hr>
+ 
+ width: 60%;
+ 
+opacity: 0.9;
+ 
+  margin: 0 10%;
+ 
+.imagem-principal {
+  position: relative;
+}
+
+.titulo-principal, .titulo-secundario {
+  font-family: 'Libre Baskerville', sans-serif;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*Foi usado para centralizar o titulo em relação a imagem principal. Ela alinha elementos vertical e horizontalmente no centro da tela. Dentro do sistema de coordenadas do CSS, os valores negativos movem o elemento na direção oposta à que eles normalmente se moveriam (é como se fosse um plano cartesiano).*/
+  color: #fff;
+  font-size: 3.6em;
+  font-weight: bold;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /*Adiciona uma sombra no texto*/
+  z-index: 1; /*Informa que o titulo deve ficar na sobreposto em relação a imagem*/
+}
+
+.titulo-secundario {
+  font-family: 'Arvo', sans-serif;
+  top: 60%;
+  font-size: 2em;
+}
+
+ 
+  width: 100%;
+ 
+ margin-bottom: 25px;
+ 
+ padding-bottom: 1em;
+ 
+ margin-bottom: 25px;
+ 
+ opacity: 0;
+ 
+  animation-name: fade; /*Define o nome da animação que será criada usando Keyframes*/
+  animation-duration: 1s;
+  animation-delay: 0.5s; /*Indica que a animação começará após meio segundo*/
+  animation-fill-mode: forwards; /*O elemento mantém as alterações feitas pela animação ao final dela*/
+ 
+.imagem-folhas {
+  width: 100%;
+}
+
+ 
+
+.imagem-principal {
+  position: relative;
+}
+ 
+lass="titulo-principal"
+ 
+class="titulo-secundario"
+ 
+.imagem-folhas {
+  width: 100%;
+}
+ 
+font-weight: bold;
+ 
+.linkMapa {
+  display: inline;
+  text-decoration: none;
+}
+ 
+padding-left: 11%;
+ 
+    text-align: center;
+ 
+    align-items: center;
+ 
+    align-items: center;
+ 
+   margin-top: 20px;
+ 
+ margin: 0;
+ 
+ transition: opacity 0.3s ease-in-out; /*Controla a opacidade do elemento variando de 0 a 1, durante o.3 segundos. "ease-in-out" significa que a transição terá uma aceleração suave no início e no final*/
+ 
+max-width: 100%;
+ 
+  max-width: 100%;
+  max-height: 100%;
+ 
+right: 0;
+ 
  <div id="mensagem-cookies" class="mensagem-cookies">
           <p>Este site utiliza cookies. Ao continuar a navegação, você concorda com o uso de cookies 🍪</p>
           <button id="btAceitar">Aceitar</button>

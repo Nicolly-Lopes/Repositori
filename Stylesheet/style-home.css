@@ -86,22 +86,29 @@ main {
   width: 100%;
 }
 
-.titulo-principal, .titulo-secundario {
+.titulo-principal,
+.titulo-secundario {
   font-family: 'Libre Baskerville', sans-serif;
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%); /*Foi usado para centralizar o titulo em relação a imagem principal. Ela alinha elementos vertical e horizontalmente no centro da tela. Dentro do sistema de coordenadas do CSS, os valores negativos movem o elemento na direção oposta à que eles normalmente se moveriam (é como se fosse um plano cartesiano).*/
+  transform: translate(-50%, -50%);
+  /*Foi usado para centralizar o titulo em relação a imagem principal. Ela alinha elementos vertical e horizontalmente no centro da tela. Dentro do sistema de coordenadas do CSS, os valores negativos movem o elemento na direção oposta à que eles normalmente se moveriam (é como se fosse um plano cartesiano).*/
   color: #fff;
   font-size: 3.6em;
   font-weight: bold;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /*Adiciona uma sombra no texto*/
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  /*Adiciona uma sombra no texto*/
   opacity: 0;
-  animation-name: fade; /*Define o nome da animação que será criada usando Keyframes*/
+  animation-name: fade;
+  /*Define o nome da animação que será criada usando Keyframes*/
   animation-duration: 1s;
-  animation-delay: 0.5s; /*Indica que a animação começará após meio segundo*/
-  animation-fill-mode: forwards; /*O elemento mantém as alterações feitas pela animação ao final dela*/
-  z-index: 1; /*Informa que o titulo deve ficar na sobreposto em relação a imagem*/
+  animation-delay: 0.5s;
+  /*Indica que a animação começará após meio segundo*/
+  animation-fill-mode: forwards;
+  /*O elemento mantém as alterações feitas pela animação ao final dela*/
+  z-index: 1;
+  /*Informa que o titulo deve ficar na sobreposto em relação a imagem*/
 }
 
 .titulo-secundario {
@@ -113,11 +120,13 @@ main {
 /*Faz o titulo aparecer gradualmente*/
 @keyframes fade {
   0% {
-    opacity: 0; /*Indica que no começo da animação o titulo ficará transparente*/
+    opacity: 0;
+    /*Indica que no começo da animação o titulo ficará transparente*/
   }
 
   100% {
-    opacity: 1; /*Após o final da animação o título ficará totalmente visível*/
+    opacity: 1;
+    /*Após o final da animação o título ficará totalmente visível*/
   }
 }
 
@@ -125,7 +134,8 @@ main {
   font-size: 30px;
   margin-top: 10px;
   padding-bottom: 50px;
-  text-transform: uppercase; /*Deixa as letras maiúsculas*/
+  text-transform: uppercase;
+  /*Deixa as letras maiúsculas*/
   text-align: center;
 }
 
@@ -139,12 +149,23 @@ main {
 
 
 /*Texto e imagem sobre a fazenda */
+.imagem-cafeComSol {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.4);
+  width: 600px;
+  height: 650px;
+  object-fit: cover;
+  /*Ajusta a imagem para a largura de 600px e altura de 650px*/
+  position: relative;
+  transform: translate(50%);
+  z-index: 1;
+  top: 100px;
+}
+
 .texto {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.4);
   width: 500px;
   height: 600px;
   padding: 40px;
-  max-width: 100%;
   background: linear-gradient(to bottom, #C6E4C4, #6DD08A);
   position: relative;
   left: 5%;
@@ -153,72 +174,17 @@ main {
   z-index: 2;
 }
 
-.imagem-cafeComSol {
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.4);
-  width: 600px;
-  height: 650px;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover; /*Ajusta a imagem para a largura de 600px e altura de 650px*/
-  position: relative;
-  transform: translate(50%);
-  z-index: 1;
-  top: 100px;
-}
-
-.principal {
-  margin-top: 50px;
-  height: 1100px;
-}
-
 .principal p {
   font-size: 20px;
   line-height: 1.3em;
   margin-bottom: 1em;
   text-align: justify;
+  text-indent: 2em;
 }
 
-/*Animação com os tópicos referentes aos valores e objetivos da fazenda*/
-.valores strong {
-  font-weight: bold;
-}
-
-.valores p {
-  display: inline-block;
-  line-height: 1.5em;
-  vertical-align: top;
-  text-align: justify;
-  width: 22%;
-  padding: 30px 30px;
-}
-
-.valores {
-  font-size: 20px;
-  text-align: center;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out; /*Controla a opacidade do elemento variando de 0 a 1, durante o.3 segundos. "ease-in-out" significa que a transição terá uma aceleração suave no início e no final*/
-}
-
-.valores:hover {
-  opacity: 0.8;
-}
-
-.valores:hover p {
-  animation-name: fade-in;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.principal {
+  margin-top: 50px;
+  height: 1100px;
 }
 
 /*Animação das palvras "Arábica" e "conilon"*/
@@ -251,14 +217,17 @@ main {
 
 
 /*Imagens sobre os tipos de grãos*/
+.cafes {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .tipo-graos {
   display: inline-block;
   text-align: center;
   margin: 10px;
-  padding-left: 11%;
   padding-bottom: 100px;
 }
-
 
 .imagem-texto {
   position: relative;
@@ -301,6 +270,48 @@ main {
   width: 100%;
   max-width: 600px;
   border-radius: 30px;
+}
+
+/*Animação com os tópicos referentes aos valores e objetivos da fazenda*/
+.valores strong {
+  font-weight: bold;
+}
+
+.valores p {
+  display: inline-block;
+  line-height: 1.5em;
+  vertical-align: top;
+  text-align: justify;
+  width: 22%;
+  padding: 30px 30px;
+}
+
+.valores {
+  font-size: 20px;
+  text-align: center;
+  opacity: 1;
+}
+
+.valores:hover {
+  opacity: 0.8;
+}
+
+.valores:hover p {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
