@@ -19,6 +19,7 @@ header {
 }
 
 nav {
+  /*O position: absolute é utilizado no elemento <nav> para posicioná-lo de forma absoluta em relação ao seu ancestral que possui position: relative*/
   position: absolute;
   top: 6.9em;
   padding-right: 12em;
@@ -26,8 +27,9 @@ nav {
 }
 
 nav ul {
+  /*Permite que os elementos ul sejam ajustados em linhas ou colunas*/
   display: flex;
-  justify-content: flex-end;
+  /*Alinha os elementos verticalmente ao centro*/
   align-items: center;
 }
 
@@ -40,6 +42,7 @@ nav a {
   text-transform: uppercase;
   color: #ffffff;
   font-weight: bold;
+  /*em:  é uma unidade de medida relativa que representa o valor da fonte do elemento atual*/
   font-size: 1em;
   text-decoration: none;
 }
@@ -55,11 +58,6 @@ nav a:hover {
   margin: 0 auto;
 }
 
-.linkMapa {
-  display: inline;
-  text-decoration: none;
-}
-
 .iconeMapa {
   height: 30px;
 }
@@ -68,6 +66,7 @@ nav a:hover {
   cursor: pointer;
   /*Aumenta o tamanho do elemento mantendo sua proporção*/
   transform: scale(1.2);
+  /*Indica que todas as transições do elemento devem demorar 0.2 s, para que elas ocorram de maneira mais suave*/
   transition: 0.2s all;
 }
 
@@ -92,9 +91,9 @@ main {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%); /*Foi usado para centralizar o titulo em relação a imagem principal*/
+  transform: translate(-50%, -50%); /*Foi usado para centralizar o titulo em relação a imagem principal. Ela alinha elementos vertical e horizontalmente no centro da tela. Dentro do sistema de coordenadas do CSS, os valores negativos movem o elemento na direção oposta à que eles normalmente se moveriam (é como se fosse um plano cartesiano).*/
   color: #fff;
-  font-size: 4em;
+  font-size: 3.6em;
   font-weight: bold;
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6); /*Adiciona uma sombra no texto*/
   opacity: 0;
@@ -139,43 +138,17 @@ main {
 }
 
 
-/*Mensagem de cookies*/
-.mensagem-cookies {
-  position: fixed;
-  text-align: center;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #f2f2f2;
-  padding: 10px;
-  display: none;
-  z-index: 3;
-}
-
-.mensagem-cookies button {
-  margin-top: 30px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  cursor: pointer;
-}
-
 /*Texto e imagem sobre a fazenda */
 .texto {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.4);
   width: 500px;
   height: 600px;
   padding: 40px;
-  margin-left: 600px;
   max-width: 100%;
   background: linear-gradient(to bottom, #C6E4C4, #6DD08A);
   position: relative;
-  left: 10%;
+  left: 5%;
+  transform: translate(85%);
   bottom: 650px;
   z-index: 2;
 }
@@ -188,7 +161,7 @@ main {
   max-height: 100%;
   object-fit: cover; /*Ajusta a imagem para a largura de 600px e altura de 650px*/
   position: relative;
-  margin-left: 400px;
+  transform: translate(50%);
   z-index: 1;
   top: 100px;
 }

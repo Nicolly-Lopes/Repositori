@@ -59,7 +59,7 @@ nav a:hover {
 /*-----------------------------------------------------Páginas de Conteúdo--------------------------------------------------------*/
 main {
     width: 100%;
-    min-height: 110vh;
+    min-height: 120vh;
 }
 
 /*foi usado para colocar margem nas páginas de conteúdo*/
@@ -147,9 +147,7 @@ main p {
     font-size: 19px;
 }
 
-#outMenorProd,
-#outMaiorProd,
-#outMenorMedia {
+.paragrafoSaida {
     color: #D3543F;
     font-size: 23px;
 }

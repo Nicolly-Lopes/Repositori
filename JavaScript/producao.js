@@ -69,6 +69,7 @@ function identificar() {
     var sacasThead = document.createElement("th");
     var produtividadeThead = document.createElement("th");
     var linhaCabecalho = document.createElement("tr");
+    var cabecalho = document.createElement("thead");
 
     idThead.innerHTML = "ID";
     hectaresThead.innerHTML = "Área (ha)";
@@ -79,7 +80,8 @@ function identificar() {
     linhaCabecalho.appendChild(hectaresThead);
     linhaCabecalho.appendChild(sacasThead);
     linhaCabecalho.appendChild(produtividadeThead);
-    tabela.appendChild(linhaCabecalho);
+    cabecalho.appendChild(linhaCabecalho);
+    tabela.appendChild(cabecalho);
 
     outMenorMedia.innerHTML = "";
     outMenorProd.innerHTML = "";
@@ -112,6 +114,7 @@ function identificar() {
         var sacasCorpo = document.createElement("td");
         var produtividadeCorpo = document.createElement("td");
         var linhaTabela = document.createElement("tr");
+        var corpo = document.createElement("tbody");
 
         idCorpo.innerHTML = vetIDAux[soma];
         hectaresCorpo.innerHTML = vetAreaVazio[contadora];
@@ -122,7 +125,8 @@ function identificar() {
         linhaTabela.appendChild(hectaresCorpo);
         linhaTabela.appendChild(sacasCorpo);
         linhaTabela.appendChild(produtividadeCorpo);
-        tabela.appendChild(linhaTabela);
+        corpo.appendChild(linhaTabela);
+        tabela.appendChild(corpo);
 
         soma++;
     }

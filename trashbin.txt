@@ -1,0 +1,6 @@
+ <div id="mensagem-cookies" class="mensagem-cookies">
+          <p>Este site utiliza cookies. Ao continuar a navegação, você concorda com o uso de cookies 🍪</p>
+          <button id="btAceitar">Aceitar</button>
+          <button id="btRecusar">Recusar</button>
+        </div>
+ 
