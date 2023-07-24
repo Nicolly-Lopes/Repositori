@@ -1,3 +1,14 @@
+/*Descrição: Esta aplicação gerencia a produtividade de áreas de produção de café em uma fazenda ao longo de 10 safras. Com um filtro de safra, o usuário pode visualizar informações em uma tabela sobre as áreas e suas produções em cada safra. Além disso, é possível identificar as áreas com maior e menor produtividade na safra. A aplicação também permite que o usuário insira um valor para ver quais áreas tiveram a produção média menor que esse valor informado. Por fim, há um filtro de busca para exibir informações específicas da área pesquisada em todas as safras.
+
+Tema: Gerenciamento das Áreas de Produção de uma Fazenda de Café
+
+Versão: 1.0
+
+Período de desenvolvimento: 21/06/2023 a 24/07/2023
+
+Autores: Davi dos Reis, Franklin Gonçalves de Andrade, Katiane Maciel do Nascimento, Rafael Capeletti Moráo e Nicolly Cerqueira Lopes Rozado*/
+
+
 //-----------------------------------código para ocultar e deixar as páginas visíveis---------------------------------------------------------
 
 const select = document.getElementById("select");  //Referência o elemento select
@@ -31,8 +42,6 @@ window.onload = function () {
     var divInicial = document.getElementById("conteudo-1");
     divInicial.style.display = "block";
 }
-
-
 
 
 //----------------------------------conteúdo do site------------------------------------------------------------------------
