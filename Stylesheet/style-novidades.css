@@ -54,7 +54,7 @@ nav a:hover {
   position: relative;
   width: 80%;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .linkMapa {
@@ -74,6 +74,11 @@ nav a:hover {
 }
 
 /* --------------------------------------------------main------------------------------------------------------------------------*/
+main {
+  background: url(../Imagens-Novidades/sacas.png) fixed center/cover no-repeat;
+
+}
+
 .imagem-lavoura {
   width: 100%;
 }
@@ -114,11 +119,27 @@ nav a:hover {
   /* Centraliza o texto horizontalmente */
 }
 
+.frase {
+  font-family: 'Arvo', sans-serif;
+  font-size: 22px;
+  line-height: 1.2em;
+  text-align: center;
+  color: #fff;
+  margin: 30px 200px;
+  text-shadow: 4px 4px 32px rgba(0, 0, 0, 0.6);
+}
+
 hr {
   margin: 40px 0;
+  color: black;
 }
 
 .conteudoSite {
+  background-image: linear-gradient(to bottom, #EEE, #CCC, #AAA); 
+  padding: 10px 80px;
+  opacity: 0.9;
+  border-radius: 5px;
+  border-radius: bottom 100px;
   text-align: center;
   width: 65%;
   margin: auto;
@@ -177,7 +198,7 @@ hr {
 
 /* Animação das redes socias */
 .navbar {
-  padding-top: 10px;
+  padding: 20px 0;
   text-align: center;
   flex-direction: column;
   display: flex;
@@ -293,7 +314,6 @@ hr {
 
 /*------------------------------------------------------------------footer-----------------------------------------------------------------*/
 footer {
-  margin-top: 25px;
   text-align: center;
   background-color: #015641;
   padding: 10px 0;

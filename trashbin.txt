@@ -1,3 +1,16 @@
+/*largura do slide*/
+ 
+/*altura do slide*/
+ 
+body {
+  font-family: 'Arvo', sans-serif;
+}
+
+ 
+    position: relative;
+ 
+define o tamanho que o conteudo de todas as páginas irão ocupar, 
+ 
 #tabela {
     width: 90%;
     margin: 50px 0 0 20px;
