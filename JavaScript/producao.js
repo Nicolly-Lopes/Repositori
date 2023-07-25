@@ -93,7 +93,6 @@ window.onload = function () {
     divInicial.style.display = "block";
 }
 
-
 //----------------------------------conteúdo do site------------------------------------------------------------------------
 
 // Refenciando os termos do HTML
@@ -106,7 +105,6 @@ const btMenorProd = document.getElementById("btMenorProd");
 const outMenorProd = document.getElementById("outMenorProd");
 const btMaiorProd = document.getElementById("btMaiorProd");
 const outMaiorProd = document.getElementById("outMaiorProd");
-
 
 // Criando vetores globais
 var vetMedia = [];
