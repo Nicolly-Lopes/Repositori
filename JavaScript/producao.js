@@ -6,7 +6,7 @@ Versão: 1.0
 
 Período de desenvolvimento: 21/06/2023 a 24/07/2023
 
-Autores: Davi dos Reis, Franklin Gonçalves de Andrade, Katiane Maciel do Nascimento, Rafael Capeletti Moráo e Nicolly Cerqueira Lopes Rozado*/
+Autores:Katiane Maciel do Nascimento, Rafael Capeletti Moráo e Nicolly Cerqueira Lopes Rozado*/
 
 
 //-----------------------------------código para ocultar e deixar as páginas visíveis---------------------------------------------------------
