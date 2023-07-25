@@ -15,9 +15,9 @@ header {
 }
 
 nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex;  /*Permite que os elementos ul sejam ajustados em linhas ou colunas*/
+    flex-direction: column; /*Alinha os itens em uma coluna vertical*/
+    align-items: center;     /*Alinha os elementos verticalmente ao centro*/
 }
 
 .logo2 {
@@ -80,7 +80,7 @@ main {
 }
 
 #titulo-conteudo:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /*é usada para aplicar uma transformação de escala em um elemento HTML, mantendo sua proporção*/
 }
 
 h4 {   /*Título Maior produtividade e título Menor produtividade*/
@@ -220,8 +220,8 @@ tr:hover {
 .slide-imagens {
     position: absolute; /*Posição absoluta em relação á classe "conteudo"*/
     border-radius: 20px;
-    width: 500px; 
-    height: 300px; 
+    width: 500px; /*largura do slide*/
+    height: 300px;   /*altura do slide*/
     overflow: hidden; /*é utilizada para esconder qualquer conteúdo que ultrapasse os limites do slide.*/
     position: absolute;
     transform: translate(170%, -10%);   /*define a posição que o slide irá ocupar*/
@@ -237,7 +237,7 @@ tr:hover {
 .slide {
     width: 100%;
     height: 100%;
-    flex-shrink: 0;
+    flex-shrink: 0; /*é usada para impedir que as imagens diminuam de tamanho se a largura do contêiner for menor que a soma das larguras das imagens.*/
 }
 
 .slide img {
