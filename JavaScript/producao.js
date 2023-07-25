@@ -177,26 +177,26 @@ function identificar() {
         vetMedia.push(mediaProducao);
 
         // conteudo da tabela td-coluna,tr-linha
-        var idCorpo = document.createElement("td");
-        var hectaresCorpo = document.createElement("td");
-        var sacasCorpo = document.createElement("td");
-        var produtividadeCorpo = document.createElement("td");
+        var idCorpoTab = document.createElement("td");
+        var hectaresCorpoTab = document.createElement("td");
+        var sacasCorpoTab = document.createElement("td");
+        var produtividadeCorpoTab = document.createElement("td");
         var linhaTabela = document.createElement("tr");
-        var corpo = document.createElement("tbody");
+        var corpoTab = document.createElement("tbody");
 
         //adiciona o conteudo das variaveis
-        idCorpo.innerHTML = vetIDAux[contadora];
-        hectaresCorpo.innerHTML = vetAreaVazio[ind];
-        sacasCorpo.innerHTML = vetSacaAux[ind];
-        produtividadeCorpo.innerHTML = mediaProducao.toFixed(2);
+        idCorpoTab.innerHTML = vetIDAux[contadora];
+        hectaresCorpoTab.innerHTML = vetAreaVazio[ind];
+        sacasCorpoTab.innerHTML = vetSacaAux[ind];
+        produtividadeCorpoTab.innerHTML = mediaProducao.toFixed(2);
 
         //adiciona o conteudo da variavel dentro da linha
-        linhaTabela.appendChild(idCorpo);
-        linhaTabela.appendChild(hectaresCorpo);
-        linhaTabela.appendChild(sacasCorpo);
-        linhaTabela.appendChild(produtividadeCorpo);
-        corpo.appendChild(linhaTabela);
-        tabela.appendChild(corpo);
+        linhaTabela.appendChild(idCorpoTab);
+        linhaTabela.appendChild(hectaresCorpoTab);
+        linhaTabela.appendChild(sacasCorpoTab);
+        linhaTabela.appendChild(produtividadeCorpoTab);
+        corpoTab.appendChild(linhaTabela);
+        tabela.appendChild(corpoTab);
 
         contadora++;
     }
