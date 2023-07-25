@@ -1,17 +1,9 @@
-/*Descrição: Esta aplicação gerencia a produtividade de áreas de produção de café em uma fazenda ao longo de 10 safras. Com um filtro de safra, o usuário pode visualizar informações em uma tabela sobre as áreas e suas produções em cada safra. Além disso, é possível identificar as áreas com maior e menor produtividade na safra. A aplicação também permite que o usuário insira um valor para ver quais áreas tiveram a produção média menor que esse valor informado. Por fim, há um filtro de busca para exibir informações específicas da área pesquisada em todas as safras.
-
-Tema: Gerenciamento das Áras de Produção de uma Fazenda de Café
-
-Versão: 1.0
-
-Período de desenvolvimento: 21/06/2023 a 24/07/2023
-
-Autores: Davi dos Reis, Franklin Gonçalves de Andrade, Katiane Maciel do Nascimento, Rafael Capeletti Moráo e Nicolly Cerqueira Lopes Rozado*/
-
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Libre+Baskerville:ital@1&family=Montserrat:ital,wght@0,100;0,200;1,100&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?família=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;1,100&display=swap');
 
+
+/*fonte*/
 body {
   font-family: 'Arvo', sans-serif;
 }
@@ -33,12 +25,15 @@ nav {
   position: absolute;
   top: 6.9em;
   padding-right: 12em;
+  /*define a largura da área de preenchimento à direita de um elemento*/
   right: 0;
 }
 
 nav ul {
-  display: flex;   /*Permite que os elementos ul sejam ajustados em linhas ou colunas*/
-  align-items: center;   /*Alinha os elementos verticalmente ao centro*/
+  display: flex;
+  /*Permite que os elementos ul sejam ajustados em linhas ou colunas*/
+  align-items: center;
+    /*Alinha os elementos verticalmente ao centro*/
 }
 
 nav li {
@@ -50,6 +45,7 @@ nav a {
   text-transform: uppercase;
   color: #ffffff;
   font-weight: bold;
+  /*em:  é uma unidade de medida relativa que representa o valor da fonte do elemento atual*/
   font-size: 1em;
   text-decoration: none;
 }
@@ -57,6 +53,7 @@ nav a {
 nav a:hover {
   color: #D2691E;
   text-decoration: underline;
+  /* adiciona uma linha de decoração ao texto*/
 }
 
 .caixa {
@@ -100,6 +97,7 @@ main {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /*Foi usado para centralizar o titulo em relação a imagem principal. Ela alinha elementos vertical e horizontalmente no centro da tela. Dentro do sistema de coordenadas do CSS, os valores negativos movem o elemento na direção oposta à que eles normalmente se moveriam (é como se fosse um plano cartesiano).*/
   color: #fff;
   font-size: 3.6em;
   font-weight: bold;
@@ -157,21 +155,26 @@ main {
 /*Texto e imagem sobre a fazenda */
 .imagem-cafeComSol {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.4);
+  /*utilizado para adicionar efeitos de sombra em volta de um elemento*/
   width: 600px;
   height: 650px;
   object-fit: cover;
   /*Ajusta a imagem para a largura de 600px e altura de 650px*/
-  position: relative; 
+  position: relative;
   transform: translate(50%);
   z-index: 1;
+  /*define a ordem de um elemento posicionado e seus descendentes ou itens flexíveis*/
+
   top: 100px;
 }
 
 .texto {
+  /*para colocar sombra na caixa */
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.4);
   width: 500px;
   height: 600px;
   padding: 40px;
+  /*colocar degrade na pagina */
   background: linear-gradient(to bottom, #C6E4C4, #6DD08A);
   position: relative;
   left: 5%;
@@ -186,6 +189,7 @@ main {
   margin-bottom: 1em;
   text-align: justify;
   text-indent: 2em;
+  /*especifica o recuo da primeira linha em um bloco de texto*/
 }
 
 .principal {
@@ -193,7 +197,7 @@ main {
   height: 1100px;
 }
 
-/*Animação das palavras "Arábica" e "conilon"*/
+/*Animação das palvras "Arábica" e "conilon"*/
 .animacao-letras {
   display: flex;
   align-items: center;
@@ -209,16 +213,23 @@ main {
   transition: 0.4s;
   transform: translateX(0);
   cursor: grab;
+  /* o cursor do mouse*/
   color: black;
 }
 
 .letra:hover {
   transform: translateY(-1rem);
+  /*quando o usuário passa o mouse sobre ela. O valor `-1rem` indica que a letra será deslocada para cima*/
   color: transparent;
+  /*degrade no contorno da letra*/
   background-clip: text;
+  /*indica que o plano de fundo (background) será aplicado apenas na área do texto dentro das bordas da letra*/
   -webkit-background-clip: text;
+  /* É uma propriedade específica para navegadores */
   -webkit-text-fill-color: transparent;
+  /*Torna o texto completamente transparente, fazendo com que apenas o plano de fundo seja visível através da área de texto*/
   background-image: linear-gradient(120deg, hsl(19, 90%, 52%), hsl(56, 100%, 50%));
+  /*um plano de fundo com um gradiente de cor linear*/
 }
 
 
@@ -226,21 +237,25 @@ main {
 .cafes {
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 80px; 
 }
 
 .tipo-graos {
   display: inline-block;
-  margin: 20px;
+  text-align: center;
+  margin: 10px;
+  padding-bottom: 100px;
 }
 
 .imagem-texto {
   position: relative;
+  display: inline-block;
+  /* especifica o comportamento de exibição*/
 }
 
 .texto-graos {
   position: absolute;
   top: 0;
+  /*posição vertical de um elemento posicionado*/
   left: 0;
   width: 100%;
   height: 100%;
@@ -264,7 +279,9 @@ main {
 
 .imagem-texto:hover .texto-graos {
   cursor: pointer;
+  visibility: visible;
   opacity: 1;
+   /*trasparencia*/
   border-radius: 30px;
 }
 
@@ -272,17 +289,21 @@ main {
 .imagem-graos {
   width: 100%;
   max-width: 600px;
+  /*largura maxima*/
   border-radius: 30px;
+  /* permite mudar os cantos do elemntos*/
 }
 
 /*Animação com os tópicos referentes aos valores e objetivos da fazenda*/
 .valores strong {
   font-weight: bold;
+  /* Peso da fonte em negrito*/
 }
 
 .valores p {
   display: inline-block;
   line-height: 1.5em;
+  /* especifica a altura de uma linha*/
   vertical-align: top;
   text-align: justify;
   width: 22%;
@@ -295,10 +316,17 @@ main {
   opacity: 1;
 }
 
+.valores:hover {
+  opacity: 0.8;
+}
+
 .valores:hover p {
   animation-name: fade-in;
+  /* especifica um nome para a animação @keyframes*/
   animation-duration: 1s;
+  /*define quanto tempo uma animação deve levar */
   animation-fill-mode: forwards;
+  /* especifica um estilo para o elemento quando a animação não está sendo reproduzida*/
 }
 
 @keyframes fade-in {
@@ -319,7 +347,8 @@ main {
   display: flex;
   height: 15rem;
   gap: 1rem;
-  padding: 20px 190px;
+  /*define o tamanho do intervalo entre as linhas e colunas*/
+  padding: 20px 200px;
 }
 
 .galeria-imagens>div {
@@ -327,12 +356,15 @@ main {
   border-radius: 1rem;
   background-position: center;
   background-repeat: no-repeat;
+  /*define como uma imagem de plano de fundo será repetida*/
   background-size: auto 100%;
-  transition: all 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+  transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+  /*velocidade do efeito de transição*/
 }
 
 .galeria-imagens>div:hover {
-  flex: 3;
+  flex: 5;
+  /*define o comprimento flexível em itens flexíveis.*/
 }
 
 /*------------------------------------------------------------------footer-----------------------------------------------------------------*/
@@ -346,4 +378,5 @@ footer {
   color: #FFFFFF;
   font-size: 13px;
   padding-bottom: 15px;
+  /* cria espaço extra dentro de um elemento*/
 }
