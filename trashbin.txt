@@ -1,3 +1,9 @@
+  /*em:  é uma unidade de medida relativa que representa o valor da fonte do elemento atual*/
+ 
+  /*O position: absolute é utilizado no elemento <nav> para posicioná-lo de forma absoluta em relação ao seu ancestral que possui position: relative*/
+ 
+  /*em:  é uma unidade de medida relativa que representa o valor da fonte do elemento atual*/
+ 
 /*center: A imagem deve ser centralizada horizontalemnte*/
  
 /*cover: define como a imagem de fundo será redimensionada para cobrir todo o elemento*/

@@ -76,7 +76,7 @@ main {
 
 .conteudo {
     display: none; /*O display: none foi usado para ocultar as divs das páginas de conteúdo*/
-    position: relative;
+    position: relative; /*Foi usado para posicionar o slide de imagens com posição absoluta em relação ao conteúdo*/
 }
 
 /*titulo principal que aparece em todas as páginas do conteúdo do site*/
@@ -93,7 +93,7 @@ main {
     transform: scale(1.05);
 }
 
-h4 {
+h4 {   /*Título Maior produtividade e título Menor produtividade*/
     padding: 20px;
     font-weight: bold;
     font-size: 22px;
@@ -124,7 +124,7 @@ select {
 select:hover {
     cursor: pointer;
     transform: scale(1.05);
-    transition: transform 0.3s;
+    transition: transform 0.3s; /*Indica que as transformações devem ocorrer de maneira suave durante 0.3s*/
 }
 
 /*frases que aparecem antes de clicar o select*/
@@ -137,7 +137,7 @@ select:hover {
     font-weight: bold;
 }
 
-strong {
+strong { /*Foi usado para destacar as palavras safra e área*/
     color: #D3543F;
 }
 
@@ -164,8 +164,8 @@ main p {
     color: #333;
     border: none;
     border-radius: 10px;
-    text-transform: uppercase;
-    transition: 0.5s all;
+    text-transform: uppercase;  /*Letras maiúsculas*/
+    transition: 0.5s all;  /*Todas as transformações devem ocorrer de forma suave durante 0.5s*/
     font-family: Verdana, Tahoma, sans-serif;
 }
 
@@ -203,7 +203,7 @@ main p {
 .tabela {
     width: 60%;
     margin: 60px 0 0 20px;
-    table-layout: fixed;
+    table-layout: fixed;  /*Coloca a mesma largura para todas as colunas*/
 }
 
 th,

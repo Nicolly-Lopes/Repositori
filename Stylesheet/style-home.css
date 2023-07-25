@@ -37,10 +37,8 @@ nav {
 }
 
 nav ul {
-  /*Permite que os elementos ul sejam ajustados em linhas ou colunas*/
-  display: flex;
-  /*Alinha os elementos verticalmente ao centro*/
-  align-items: center;
+  display: flex;   /*Permite que os elementos ul sejam ajustados em linhas ou colunas*/
+  align-items: center;   /*Alinha os elementos verticalmente ao centro*/
 }
 
 nav li {
@@ -52,7 +50,6 @@ nav a {
   text-transform: uppercase;
   color: #ffffff;
   font-weight: bold;
-  /*em:  é uma unidade de medida relativa que representa o valor da fonte do elemento atual*/
   font-size: 1em;
   text-decoration: none;
 }
