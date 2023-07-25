@@ -17,18 +17,20 @@ body {
 }
 
 /* --------------------------------------------------header------------------------------------------------------------------------*/
-
+/* Estilos para o cabeçalho */
 header {
   width: 100%;
   background: #015641;
   padding: 1.3em 0;
 }
 
+/* Estilos para o logotipo */
 .logo {
   width: 12.5em;
   padding: 0 9.4em;
 }
 
+/* Estilos para a barra de navegação */
 nav {
   position: absolute;
   top: 6.9em;
@@ -47,6 +49,7 @@ nav li {
   margin-left: 3em;
 }
 
+/* Estilos para os links da barra de navegação */
 nav a {
   text-transform: uppercase;
   color: #ffffff;
@@ -60,6 +63,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Estilos para a caixa */
 .caixa {
   position: relative;
   width: 80%;
@@ -67,6 +71,7 @@ nav a:hover {
   padding-bottom: 30px;
 }
 
+/* Estilos para o link do mapa e seus ícones */
 .linkMapa {
   display: inline;
   text-decoration: none;
@@ -130,6 +135,7 @@ main {
   /* Centraliza o texto horizontalmente */
 }
 
+/* Estilos para a classe "frase" */
 .frase {
   font-family: 'Arvo', sans-serif;
   font-size: 22px;
@@ -140,11 +146,13 @@ main {
   text-shadow: 4px 4px 32px rgba(0, 0, 0, 0.6);
 }
 
+/* Estilos para a tag "hr" */
 hr {
   margin: 40px 0;
   color: black;
 }
 
+/* Estilos para a classe "conteudoSite" */
 .conteudoSite {
   background-image: linear-gradient(to bottom, #EEE, #CCC, #AAA); 
   padding: 10px 80px;
@@ -156,6 +164,7 @@ hr {
   line-height: 2;
 }
 
+/* Estilos para os cabeçalhos dentro da classe "conteudoSite" */
 .conteudoSite h4 {
   font-family: 'Arvo', sans-serif;
   font-size: 20px;
@@ -181,6 +190,7 @@ hr {
   font-weight: bold;
 }
 
+/* Estilos para os parágrafos dentro da classe "conteudoSite" */
 .conteudoSite p {
   padding: 40px 0;
   line-height: 30px;
@@ -189,6 +199,7 @@ hr {
   margin: 0 auto;
 }
 
+/* Estilos para as listas não ordenadas dentro da classe "conteudoSite" */
 .conteudoSite ul {
   font-size: 17px;
   list-style-type: disc;
@@ -196,11 +207,13 @@ hr {
   margin: 0 200px;
 }
 
+/* Estilos para imagens com classe "imagem" */
 .imagem {
   width: 50%;
   margin-bottom: 20px;
 }
 
+/* Estilos para imagens com classe "imgBeneficios" */
 .imgBeneficios {
   width: 60%;
   margin: 20px 0;
@@ -208,26 +221,32 @@ hr {
 
 /* Animação das redes socias */
 .navbar {
-  padding: 20px 0;
+  padding-top: 10px;
   text-align: center;
   flex-direction: column;
   display: flex;
 }
 
+/* Define a formatação dos elementos de box, como exibição inline-block, preenchimento, margem e animação de transição */
 .box {
   display: inline-block;
   padding: 18px;
-  margin: 10px;
+  margin: auto;
+  margin-bottom: 10px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
   transition: transform .4s ease;
+  width: 16%;
 }
 
+
+/* Efeito de deslocamento ao passar o mouse sobre um elemento de box */
 .box:hover {
   transform: translateX(20px);
 }
 
+/* Efeito de fundo ao passar o mouse sobre um elemento de box */
 .box:hover::before {
   content: "";
   position: absolute;
@@ -239,12 +258,14 @@ hr {
   transition: all .4s ease;
 }
 
+/* Efeito de fundo e sombreamento do ícone ao passar o mouse sobre um elemento da box */
 .box:hover .icon {
   background: #fff;
   color: #3b3b3b;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
+/* Estilos específicos para o segundo elemento da box ao passar o mouse */
 .box:nth-child(2):hover::before {
   background: #25d366;
 }
@@ -255,10 +276,12 @@ hr {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
+/* Ajustes de posição para o texto*/
 .navbar p {
   transform: translate(70px);
 }
 
+/* Estilos para o ícone no interior do elemento de box */
 .box .icon {
   position: absolute;
   top: 50%;
@@ -272,11 +295,13 @@ hr {
   transition: all .4s ease;
 }
 
+/* Estilos para os links (âncoras) na barra de navegação */
 .navbar a {
   text-decoration: none;
   color: white;
 }
 
+/* Estilos específicos para o ícone do Instagram */
 .icon-instagram {
   background-color: #c32aa3;
   border-radius: 50%;
@@ -294,6 +319,7 @@ hr {
   transform: translate(-50%, -50%);
 }
 
+/* Estilos específicos para o ícone do WhatsApp */
 .icon-whatsapp {
   background-color: #25d366;
   border-radius: 50%;
@@ -311,6 +337,7 @@ hr {
   transform: translate(-50%, -50%);
 }
 
+/* Estilos para o contêiner de ícones na seção de contato */
 .icon-container {
   display: flex;
   flex-direction: column;
@@ -321,14 +348,15 @@ hr {
   margin: 10px 0;
 }
 
-
 /*------------------------------------------------------------------footer-----------------------------------------------------------------*/
+/* Estilos para o rodapé */
 footer {
   text-align: center;
   background-color: #015641;
   padding: 10px 0;
 }
 
+/* Estilos para a classe "copyright" */
 .copyright {
   color: #FFFFFF;
   font-size: 13px;

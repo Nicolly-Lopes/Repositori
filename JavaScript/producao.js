@@ -10,8 +10,14 @@ Autores: Davi dos Reis, Franklin Gonçalves de Andrade, Katiane Maciel do Nascim
 
 
 //-----------------------------------código para ocultar e deixar as páginas visíveis---------------------------------------------------------
+// Referência o elemento select
 
-const select = document.getElementById("select");  //Referência o elemento select
+const select = document.getElementById("select");
+const pagProducao = document.getElementById("pagProducao");
+const pagMaiorProd = document.getElementById("pagMaiorProd");
+const pagMediaProd = document.getElementById("pagMediaProd");
+const pagMenorProd = document.getElementById("pagMenorProd");
+const pagFiltro = document.getElementById("pagFiltro");  //
 
 //Recebe o valor de 1, pois a primeira página a aparecer é a com id=conteudo-1
 var conteudoAtual = 1;
@@ -35,6 +41,50 @@ function mostrarConteudo(conteudoId) {
     }
 
     conteudoAtual = conteudoId;
+
+    // Muda a cor da palavra na barra de navegação dependendo em qual página om usuário está utulizando
+    switch (conteudoId) {
+        case 1:
+            pagProducao.style.color = "chocolate";
+            pagMaiorProd.style.color = "white";
+            pagMediaProd.style.color = "white";
+            pagMenorProd.style.color = "white";
+            pagFiltro.style.color = "white";
+            break;
+
+        case 2:
+
+            pagMaiorProd.style.color = "chocolate";
+            pagProducao.style.color = "white";
+            pagMediaProd.style.color = "white";
+            pagMenorProd.style.color = "white";
+            pagFiltro.style.color = "white";
+            break;
+        case 3:
+            pagMediaProd.style.color = "chocolate";
+            pagProducao.style.color = "white";
+            pagMaiorProd.style.color = "white";
+            pagMenorProd.style.color = "white";
+            pagFiltro.style.color = "white";
+            break;
+
+        case 4:
+            pagMenorProd.style.color = "chocolate";
+            pagProducao.style.color = "white";
+            pagMaiorProd.style.color = "white";
+            pagMediaProd.style.color = "white";
+            pagFiltro.style.color = "white";
+            break;
+
+        case 5:
+            pagFiltro.style.color = "chocolate";
+            pagProducao.style.color = "white";
+            pagMaiorProd.style.color = "white";
+            pagMediaProd.style.color = "white";
+            pagMenorProd.style.color = "white";
+            break;
+
+    }
 }
 
 //Exibir conteúdo da primeira div quando a página carregar
@@ -72,7 +122,7 @@ function identificar() {
         frase.remove();
     }
 
-    //referência a tabela
+    //referência a tabela e cria o cabeçalho
     const tabela = document.getElementById("tabela");
     tabela.innerHTML = "";
 
@@ -84,11 +134,13 @@ function identificar() {
     var linhaCabecalho = document.createElement("tr");
     var cabecalho = document.createElement("thead");
 
+    //adiciona os conteudos nas variaves
     idThead.innerHTML = "ID";
     hectaresThead.innerHTML = "Área (ha)";
     sacasThead.innerHTML = "Sacas";
     produtividadeThead.innerHTML = "Produtividade <br>Safra/ha";
 
+    //adiciona as variaveis nas linhas
     linhaCabecalho.appendChild(idThead);
     linhaCabecalho.appendChild(hectaresThead);
     linhaCabecalho.appendChild(sacasThead);
@@ -124,7 +176,7 @@ function identificar() {
         mediaProducao = vetSacaAux[contadora] / vetAreaVazio[ind];
         vetMedia.push(mediaProducao);
 
-        //cria o corpo da tabela
+        // conteudo da tabela td-coluna,tr-linha
         var idCorpo = document.createElement("td");
         var hectaresCorpo = document.createElement("td");
         var sacasCorpo = document.createElement("td");
@@ -132,11 +184,13 @@ function identificar() {
         var linhaTabela = document.createElement("tr");
         var corpo = document.createElement("tbody");
 
+        //adiciona o conteudo das variaveis
         idCorpo.innerHTML = vetIDAux[contadora];
         hectaresCorpo.innerHTML = vetAreaVazio[ind];
         sacasCorpo.innerHTML = vetSacaAux[ind];
         produtividadeCorpo.innerHTML = mediaProducao.toFixed(2);
 
+        //adiciona o conteudo da variavel dentro da linha
         linhaTabela.appendChild(idCorpo);
         linhaTabela.appendChild(hectaresCorpo);
         linhaTabela.appendChild(sacasCorpo);
@@ -166,7 +220,6 @@ function menorProd() {
         // Exição da mensagem ao usuário
         outMenorProd.innerHTML = ` ${vetIDAux[indMenor]} com ${vetMedia[indMenor].toFixed(2)} sacas/ha`;
     }
-
 }
 
 // function para verificar a maior produção da safra
@@ -227,7 +280,7 @@ function mostrarMedia() {
         }
         // estrutura condicional verificando se houve alguma alteração no flag
         if (flag == 0) {
-            outMenorMedia.innerHTML += `Nenhuma das áreas atingiram produção menor que a informada`
+            outMenorMedia.innerHTML = `Nenhuma das áreas atingiram produção menor que a informada`
         }
 
     }
