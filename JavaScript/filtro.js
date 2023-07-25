@@ -59,7 +59,7 @@ function pesquisarArea() {
   cabecalhoTabela.appendChild(trCabecalho);
 
   //obtem o valor digitado no input com o iD "filtro" e trasforma em maiuscula
-  var opMaiuscula = filtro.value;
+  var setorArea = filtro.value.toUpperCase();
   //variavel para controlar se foi encontrada a area pesquisada
   var flag = 0;
   //limpa o conteudo da div com ID "outFiltro"
@@ -85,7 +85,7 @@ function pesquisarArea() {
 
     // se encontrou a area adiciona os dados nos vetores correspondentes
     for (var ind = 0; ind < vetID.length; ind++) {
-      if (vetID[ind] == opMaiuscula.toUpperCase()) {
+      if (vetID[ind] == setorArea) {
         flag++;
         vetSetor.push(vetArea[ind]);
         vetProd.push(vetSacas[ind]);
@@ -102,7 +102,7 @@ function pesquisarArea() {
 
         //adiciona o conteudo das variaveis
         safra.innerHTML = ano;
-        id.innerHTML = opMaiuscula;
+        id.innerHTML = setorArea;
         hectares.innerHTML = vetSetor[0];
         sacas.innerHTML = vetProd[contadora];
         produtividade.innerHTML = vetDivisor[contadora].toFixed(2);

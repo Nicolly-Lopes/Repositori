@@ -171,7 +171,7 @@ function identificar() {
 
     // Ordenação da media de produção de acordo com a safra
     for (var ind = safra; ind < vetSacaAux.length; ind += 10) {
-        mediaProducao = vetSacaAux[contadora] / vetAreaVazio[ind];
+        mediaProducao = vetSacaAux[ind] / vetAreaVazio[ind];
         vetMedia.push(mediaProducao);
 
         // conteudo da tabela td-coluna,tr-linha
@@ -186,7 +186,7 @@ function identificar() {
         idCorpoTab.innerHTML = vetIDAux[contadora];
         hectaresCorpoTab.innerHTML = vetAreaVazio[ind];
         sacasCorpoTab.innerHTML = vetSacaAux[ind];
-        produtividadeCorpoTab.innerHTML = mediaProducao.toFixed(2);
+        produtividadeCorpoTab.innerHTML = vetMedia[contadora].toFixed(2);
 
         //adiciona o conteudo da variavel dentro da linha
         linhaTabela.appendChild(idCorpoTab);
