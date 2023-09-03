@@ -12,35 +12,32 @@ header {
   width: 100%;
   background: #015641;
   padding: 1.3em 0;
-}
-
-/* Estilos para o logotipo */
-.logo {
-  width: 12.5em;
-  padding: 0 9.4em;
-}
-
-/* Estilos para a barra de navegação */
-nav {
-  position: absolute;
-  top: 6.9em;
-  padding-right: 12em;
-  right: 0;
-}
-
-nav ul {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
 }
 
-nav li {
-  display: inline;
-  margin-left: 3em;
+/* Estilos para o logotipo */
+.logo2 {
+  width: 25%;
+  padding: 0 9.4em;
 }
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5vw;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
 
 /* Estilos para os links da barra de navegação */
 nav a {
+  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   font-weight: bold;
@@ -55,7 +52,10 @@ nav a:hover {
 
 /* Estilos para a caixa */
 .caixa {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 80%;
   margin: 0 auto;
   padding-bottom: 30px;
@@ -63,7 +63,6 @@ nav a:hover {
 
 /* Estilos para o link do mapa e seus ícones */
 .linkMapa {
-  display: inline;
   text-decoration: none;
 }
 
@@ -79,12 +78,6 @@ nav a:hover {
 }
 
 /* --------------------------------------------------main------------------------------------------------------------------------*/
-main {
-  background: url(../Imagens-Novidades/sacas.png) fixed no-repeat;
-  background-position: center; 
-  background-size: cover;    
-}
-
 .imagem-lavoura {
   width: 100%;
 }
@@ -128,12 +121,10 @@ main {
 /* Estilos para a classe "frase" */
 .frase {
   font-family: 'Arvo', sans-serif;
-  font-size: 22px;
-  line-height: 1.2em;
+  font-size: 1.5em;
+  line-height: 1.4em;
   text-align: center;
-  color: #fff;
-  margin: 30px 200px;
-  text-shadow: 4px 4px 32px rgba(0, 0, 0, 0.6);
+  margin: 8vh 200px;
 }
 
 /* Estilos para a tag "hr" */
@@ -169,14 +160,9 @@ hr {
 
 .conteudoSite h2 {
   font-family: 'Libre Baskerville', sans-serif;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.conteudoSite h1 {
-  font-family: 'Arvo', sans-serif;
-  text-transform: uppercase;
-  font-size: 30px;
+  font-size: 2.5em;
+  color: #25d366;
+  text-shadow: 2px 2px 2px #015641;
   font-weight: bold;
 }
 
@@ -351,4 +337,108 @@ footer {
   color: #FFFFFF;
   font-size: 13px;
   padding-bottom: 15px;
+}
+
+.logo {
+  width: 15%;
+  padding: 0 9.4em;
+}
+
+
+@media (max-width: 1000px) {
+    nav a {
+      text-align: center;
+    }
+
+    .titulo-principal{
+      font-size: 1.5em;
+    }
+
+    .titulo-secundario {
+      font-size: 1em;
+    }
+
+    .frase {
+      font-size: 0.9em;
+    }
+
+    .conteudoSite h2 {
+      font-size: 1.5em;
+      text-shadow: none;
+    }
+
+    .conteudoSite h3, .conteudoSite h4{
+      font-size: 1.3em;
+    }
+
+    .conteudoSite p {
+      font-size: 0.8em;
+    }
+
+    .conteudoSite ul {
+      font-size: 0.7em;
+      margin: 0;
+    }
+}
+
+@media (max-width: 800px){
+  .frase {
+    margin: 5vh 2vh;
+  }
+}
+
+@media (max-width: 660px) {
+  nav a {
+    font-size: 0.5em;
+  }
+
+  .iconeMapa {
+    height: 17px;
+  }  
+
+  .titulo-principal{
+    font-size: 1em;
+  }
+
+  .titulo-secundario {
+    font-size: 0.6em;
+  }
+
+  .frase {
+    font-size: 0.5em;
+  }
+
+  .conteudoSite h2 {
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  .conteudoSite h3, .conteudoSite h4{
+    font-size: 1.1em;
+    margin: 0;
+  }
+
+  .conteudoSite p {
+    font-size: 0.6em;
+    margin: 0;
+  }
+
+  .conteudoSite ul {
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 500px) {
+  .conteudoSite {
+    padding: 5vh;
+    width: 80%;
+  }
+
+  .titulo-principal{
+    font-size: 0.7em;
+  }
+
+  .titulo-secundario {
+    font-size: 0.5em;
+  }
 }

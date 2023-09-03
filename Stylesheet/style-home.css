@@ -12,7 +12,7 @@ body {
 header {
   width: 100%;
   background: #015641;
-  padding: 1.3em 0;
+  padding: 0.2em 0;
 }
 
 .logo {
@@ -21,20 +21,13 @@ header {
 }
 
 nav {
-  /*O position: absolute é utilizado no elemento <nav> para posicioná-lo de forma absoluta em relação ao seu ancestral que possui position: relative*/
-  position: absolute;
-  top: 6.9em;
-  padding-right: 12em;
-  /*define a largura da área de preenchimento à direita de um elemento*/
-  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 5vh;
+  flex-wrap: wrap;
 }
 
-nav ul {
-  display: flex;
-  /*Permite que os elementos ul sejam ajustados em linhas ou colunas*/
-  align-items: center;
-    /*Alinha os elementos verticalmente ao centro*/
-}
+
 
 nav li {
   display: inline;
@@ -57,7 +50,10 @@ nav a:hover {
 }
 
 .caixa {
-  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   width: 80%;
   margin: 0 auto;
 }
@@ -136,7 +132,7 @@ main {
 
 .titulo {
   font-size: 30px;
-  margin-top: 10px;
+  margin-top: 70px;
   padding-bottom: 50px;
   text-transform: uppercase;
   /*Deixa as letras maiúsculas*/
@@ -156,31 +152,31 @@ main {
 .imagem-cafeComSol {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.4);
   /*utilizado para adicionar efeitos de sombra em volta de um elemento*/
-  width: 600px;
-  height: 650px;
+  width: 35vw;
+  height: 83vh;
   object-fit: cover;
   /*Ajusta a imagem para a largura de 600px e altura de 650px*/
   position: relative;
-  transform: translate(50%);
+  transform: translate(25vW, 10vh);
   z-index: 1;
   /*define a ordem de um elemento posicionado e seus descendentes ou itens flexíveis*/
-
-  top: 100px;
 }
 
 .texto {
   /*para colocar sombra na caixa */
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.4);
-  width: 500px;
-  height: 600px;
+  width: 30vw;
+  height: 77vh;
   padding: 40px;
   /*colocar degrade na pagina */
   background: linear-gradient(to bottom, #C6E4C4, #6DD08A);
   position: relative;
-  left: 5%;
-  transform: translate(85%);
-  bottom: 650px;
+  transform: translate(35vw, -85vh);
   z-index: 2;
+}
+
+.imagemTexto {
+  height: 100vh;
 }
 
 .principal p {
@@ -194,7 +190,6 @@ main {
 
 .principal {
   margin-top: 50px;
-  height: 1100px;
 }
 
 /*Animação das palvras "Arábica" e "conilon"*/
@@ -301,16 +296,17 @@ main {
 }
 
 .valores p {
-  display: inline-block;
   line-height: 1.5em;
   /* especifica a altura de uma linha*/
-  vertical-align: top;
+  width: 55vh;
   text-align: justify;
-  width: 22%;
   padding: 30px 30px;
 }
 
 .valores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   font-size: 20px;
   text-align: center;
   opacity: 1;
@@ -348,7 +344,7 @@ main {
   height: 15rem;
   gap: 1rem;
   /*define o tamanho do intervalo entre as linhas e colunas*/
-  padding: 20px 200px;
+  padding: 20px 80px;
 }
 
 .galeria-imagens>div {
@@ -379,4 +375,141 @@ footer {
   font-size: 13px;
   padding-bottom: 15px;
   /* cria espaço extra dentro de um elemento*/
+}
+
+@media (max-width: 1500px) {
+  .logo {
+    width: 8em;
+  }
+
+  .titulo-principal{
+    font-size: 2em;
+  }
+
+  .titulo-secundario {
+    font-size: 1.5em;
+  }
+
+  .titulo {
+    font-size: 25px;
+  }
+
+  #frasePrincipal {
+    font-size: 23px;
+  }
+
+  .principal p {
+    font-size: 17px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .excluirImagem {
+    display: none;
+  }
+
+  .galeria-imagens {
+    padding: 20px 5vh;
+    height: 10rem;
+  }
+
+  .principal p {
+    font-size: 16px;
+  }
+
+  .texto-graos p {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 780px) {
+  nav a {
+    text-align: center;
+    font-size: 0.6em;
+  }
+
+  .iconeMapa {
+    width: 15px;
+  }
+
+  .titulo-principal{
+    font-size: 1.3em;
+  }
+
+  .titulo-secundario {
+    font-size: 0.8em;
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+
+  #frasePrincipal {
+    font-size: 15px;
+  }
+
+  .principal p {
+    font-size: 12px;
+  }
+
+  .tipo-graos div {
+    font-size: 16px;
+  }
+
+  .texto-graos p {
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+@media (max-width: 500px) {
+  .titulo-principal{
+    font-size: 0.8em;
+  }
+
+  .titulo-secundario {
+    font-size: 0.5em;
+  }
+
+  .titulo {
+    font-size: 15px;
+  }
+
+  #frasePrincipal {
+    font-size: 13px;
+  }
+
+  .principal p {
+    font-size: 9px;
+  }
+
+  .texto-graos p {
+    font-size: 14px;
+    margin: 5vh;
+  }
+
+  .logo {
+    width: 4em;
+  }
+
+  nav a {
+    font-size: 0.4em;
+  }
+}
+
+@media (max-width: 430px ) {
+  .texto-graos p {
+    font-size: 11px;
+  } 
+}
+
+@media (max-width: 350px ) {
+  .texto-graos p {
+    font-size: 9px;
+  } 
 }

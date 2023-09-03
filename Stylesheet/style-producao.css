@@ -23,12 +23,15 @@ nav {
 .logo2 {
     margin: 20px 0 20px 0;
     width: 11%;
+    min-width: 300px;
     height: auto;
 }
 
 nav ul {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav li {
@@ -279,11 +282,28 @@ footer {
 
 .logo {
     padding: 0 0 10px 0;
-    height: 12.5em;
+    width: 13%;
 }
 
 .copyright {
     color: #FFFFFF;
     font-size: 13px;
     padding-bottom: 15px;
+}
+
+@media (max-width: 800px) {
+    nav a {
+        font-size: 0.8em;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .logo2 {
+        min-width: 250px;
+    }
+    
+    nav a {
+        font-size: 0.6em;
+    }
 }
