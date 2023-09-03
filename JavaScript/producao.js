@@ -136,7 +136,7 @@ function identificar() {
     idThead.innerHTML = "ID";
     hectaresThead.innerHTML = "Área (ha)";
     sacasThead.innerHTML = "Sacas";
-    produtividadeThead.innerHTML = "Produtividade <br>Safra/ha";
+    produtividadeThead.innerHTML = "Sacas/ha";
 
     //adiciona as variaveis nas linhas
     linhaCabecalho.appendChild(idThead);

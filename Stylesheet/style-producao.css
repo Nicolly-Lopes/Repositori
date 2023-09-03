@@ -194,7 +194,7 @@ main p {
 }
 
 .tabela {
-    width: 60%;
+    width: 50%;
     margin: 60px 0 0 20px;
     table-layout: fixed;  /*Coloca a mesma largura para todas as colunas*/
 }
@@ -220,14 +220,13 @@ tr:hover {
 }
 
 /*slide de imagens da página "Maior produtividade"*/
-.slide-imagens {
-    position: absolute; /*Posição absoluta em relação á classe "conteudo"*/
+.slide-imagens { /*Posição absoluta em relação á classe "conteudo"*/
     border-radius: 20px;
-    width: 500px; /*largura do slide*/
-    height: 300px;   /*altura do slide*/
+    width: 32vw; /*largura do slide*/
+    height: 30vh;   /*altura do slide*/
     overflow: hidden; /*é utilizada para esconder qualquer conteúdo que ultrapasse os limites do slide.*/
     position: absolute;
-    transform: translate(170%, -10%);   /*define a posição que o slide irá ocupar*/
+    transform: translate(170%, -6%);   /*define a posição que o slide irá ocupar*/
 }
 
 .imagens-lavoura {
@@ -291,9 +290,89 @@ footer {
     padding-bottom: 15px;
 }
 
-@media (max-width: 800px) {
+
+@media (max-width: 1250px) {
+    .tabela {
+        width: 40%;
+    }
+
+    #sltSafra {
+        margin-bottom: 5vh;
+    }
+
+    .button {
+        margin-top: 5vh;
+    }
+
+    .conteudo-site {
+        margin: 0 10vh;
+    }
+}
+
+
+@media (max-width: 1110px) {
+    #titulo, #titulo2 {
+        font-size: 35px;
+    }
+
+    .imagem-producao img {
+        margin-top: 10vh;
+        width: 70%;
+    }
+
+    .tabela {
+        width: 35%;
+        font-size: 8px;
+    }
+
+    #tabela {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 1000px) {
     nav a {
         font-size: 0.8em;
+    }
+
+    .imagem-producao, .slide-imagens {
+        display: none;
+    }
+
+    main {
+        text-align: center;
+        margin: 0;
+    }
+
+    #sltSafra {
+        margin: 0;
+        margin-bottom: 5vh;
+    }
+
+    .conteudo-site {
+        margin: 0;
+    }
+
+    .conteudo {
+        text-align: center;
+    }
+
+    #titulo-conteudo {
+        margin: 0;
+        font-size: 30px;
+    }
+
+    th {
+        font-size: 12px;
+    }
+
+    h4, #btMaiorProd, input {
+        margin-top: 5vh;
+    }
+
+    .tabela, #tabela {
+        width: 90%;
     }
 }
 
@@ -305,5 +384,11 @@ footer {
     
     nav a {
         font-size: 0.6em;
+    }
+
+    #titulo, #titulo2 {
+        font-size: 30px;
+        margin-left: 3vh;
+        margin-right: 3vh;
     }
 }

@@ -24,6 +24,8 @@ filtro.addEventListener("keypress", function (event) {
 btPesquisar.addEventListener("click", pesquisarArea);
 
 function pesquisarArea() {
+  cabecalhoTabela.innerHTML = "";
+  
   //Cria o cabeçalho da tabela
   var safraCabecalho = document.createElement("th");
   var idCabecalho = document.createElement("th");
@@ -37,7 +39,7 @@ function pesquisarArea() {
   idCabecalho.innerHTML = "ID";
   hectaresCabecalho.innerHTML = "Área (ha)";
   sacasCabecalho.innerHTML = "Sacas";
-  produtividadeCabecalho.innerHTML = "Produtividade <br>Safra/ha";
+  produtividadeCabecalho.innerHTML = "Sacas/ha";
 
   //adiciona as variaveis nas linhas
   trCabecalho.appendChild(safraCabecalho);
