@@ -14,17 +14,17 @@
 <body>
 
     <header>
-            <img class="logo2" src="./Imagens-Geral/logo2.png">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a id="pagProducao" style="color: chocolate;" href="#" onclick="mostrarConteudo(1)">Produção</a>
-                    <li><a id="pagMaiorProd" href="#" onclick="mostrarConteudo(2)">Maior produtividade</a>
-                    <li><a id="pagMediaProd" href="#" onclick="mostrarConteudo(3)">Produção Média</a></li>
-                    <li><a id="pagMenorProd" href="#" onclick="mostrarConteudo(4)">Menor produtividade</a></li>
-                    <li><a id="pagFiltro" href="#" onclick="mostrarConteudo(5)">Filtro</a>
-                </ul>
-            </nav>
+        <img class="logo2" src="./Imagens-Geral/logo2.png">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a id="pagProducao" style="color: chocolate;" href="#" onclick="mostrarConteudo(1)">Produção</a>
+                <li><a id="pagMaiorProd" href="#" onclick="mostrarConteudo(2)">Maior produtividade</a>
+                <li><a id="pagMediaProd" href="#" onclick="mostrarConteudo(3)">Produção Média</a></li>
+                <li><a id="pagMenorProd" href="#" onclick="mostrarConteudo(4)">Menor produtividade</a></li>
+                <li><a id="pagFiltro" href="#" onclick="mostrarConteudo(5)">Filtro</a>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -107,10 +107,14 @@
 
                     <div class="imagem-producao"><img src="./Imagens-Geral/figura4.png"></div>
 
-                    <label>Buscar áreas com produtividade menores que:<input type="number"
-                            placeholder="Digite uma média" id="inMedia" required></label>
-                    <input type="button" value="Buscar 🔍" id="btMostrar" class="button">
-                    <h3 id="outMenorMedia" class="paragrafoSaida"></h3>
+                    <div class="inputPesquisa">
+                        <label for="inMedia">Buscar áreas com produtividade menores que:</label>
+                        <div>
+                            <input type="number" placeholder="Digite uma média" id="inMedia" required>
+                            <input type="button" value="Buscar 🔍" id="btMostrar" class="button">
+                        </div>
+                        <h3 id="outMenorMedia" class="paragrafoSaida"></h3>
+                    </div>
                 </div>
 
             </section>
@@ -137,6 +141,8 @@
 
                     <h1 id="titulo-conteudo">Gerenciamento das Áreas de Produção</h1>
 
+
+
                     <label> Buscar produtividade por área:
                         <input class="inBarraPesquisa" type="search" placeholder="Buscar área" list="areas">
                         <datalist id="areas">
@@ -152,10 +158,13 @@
                             <option value="V49"></option>
                         </datalist>
                     </label>
+
                     <input type="button" value="Buscar 🔎" id="btPesquisar" class="button">
 
 
                     <div class="imagem-producao"><img src="./Imagens-Geral/figura2.png"></div>
+
+
                     <h2 id="titulo2">Selecione uma <strong>área</strong> <br>para mais informações!</h2>
 
                     <table class="tabela">
@@ -164,6 +173,7 @@
                     </table>
 
                     <h3 id="outFiltroMensagem" class="paragrafoSaida"></h3>
+
                 </div>
             </section>
 

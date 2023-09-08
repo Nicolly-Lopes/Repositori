@@ -57,7 +57,7 @@ nav a:hover {
 /*-----------------------------------------------------Páginas de Conteúdo--------------------------------------------------------*/
 main {
     width: 100%;
-    min-height: 120vh;
+    min-height: 105vh;
 }
 
 /*foi usado para colocar margem nas páginas de conteúdo*/
@@ -95,6 +95,7 @@ h4 {   /*Título Maior produtividade e título Menor produtividade*/
 /*imagens que ficam ao lado direito das páginas*/
 .imagem-producao {
     max-width: 90%;
+    text-align: end;
     height: auto;
     float: right;
 }
@@ -179,11 +180,18 @@ main p {
 .inBarraPesquisa {
     padding-right: 4px;
     margin: 0 4px;
+    margin-left: 20px;
     font-size: 16px;
     text-align: center;
     border: 1px solid black;
     border-radius: 10px;
     color: #333;
+}
+
+.inputPesquisa {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
 }
 
 /*Tabela da página de produção*/
@@ -222,8 +230,8 @@ tr:hover {
 /*slide de imagens da página "Maior produtividade"*/
 .slide-imagens { /*Posição absoluta em relação á classe "conteudo"*/
     border-radius: 20px;
-    width: 32vw; /*largura do slide*/
-    height: 30vh;   /*altura do slide*/
+    width: 30vw; /*largura do slide*/
+    height: 35vh;   /*altura do slide*/
     overflow: hidden; /*é utilizada para esconder qualquer conteúdo que ultrapasse os limites do slide.*/
     position: absolute;
     transform: translate(170%, -6%);   /*define a posição que o slide irá ocupar*/
@@ -272,6 +280,7 @@ tr:hover {
     }
 }
 
+
 /*--------------------------------------------------------footer-------------------------------------------------------------------------*/
 footer {
     text-align: center;
@@ -281,7 +290,7 @@ footer {
 
 .logo {
     padding: 0 0 10px 0;
-    width: 13%;
+    width: 12%;
 }
 
 .copyright {
@@ -293,7 +302,7 @@ footer {
 
 @media (max-width: 1250px) {
     .tabela {
-        width: 40%;
+        width: 42%;
     }
 
     #sltSafra {
@@ -307,6 +316,8 @@ footer {
     .conteudo-site {
         margin: 0 10vh;
     }
+
+
 }
 
 
@@ -315,14 +326,17 @@ footer {
         font-size: 35px;
     }
 
+    .imagem-producao {
+        max-width: 50%;
+    }
+
     .imagem-producao img {
         margin-top: 10vh;
-        width: 70%;
+        width: 90%;
     }
 
     .tabela {
-        width: 35%;
-        font-size: 8px;
+        width: 45%;
     }
 
     #tabela {
@@ -364,7 +378,7 @@ footer {
     }
 
     th {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     h4, #btMaiorProd, input {
@@ -390,5 +404,9 @@ footer {
         font-size: 30px;
         margin-left: 3vh;
         margin-right: 3vh;
+    }
+
+    th, td {
+        font-size: 12px;
     }
 }

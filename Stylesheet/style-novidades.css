@@ -97,7 +97,7 @@ nav a:hover {
   color: #fff;
   font-size: 3em;
   font-weight: bold;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7);
   /* Adiciona uma sombra no texto */
   z-index: 1;
   /* Informa que o titulo deve ficar na sobreposto em relação a imagem */
@@ -135,14 +135,19 @@ hr {
 
 /* Estilos para a classe "conteudoSite" */
 .conteudoSite {
-  background-image: linear-gradient(to bottom, #EEE, #CCC, #AAA); 
+  background-color: white;
   padding: 10px 80px;
   opacity: 0.9;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
   text-align: center;
   width: 65%;
   margin: 0 auto;
   line-height: 2;
+}
+
+main {
+  background-image: linear-gradient(to bottom, #EEE, #d4d2d2, #c4c2c2); 
 }
 
 /* Estilos para os cabeçalhos dentro da classe "conteudoSite" */
@@ -162,7 +167,7 @@ hr {
   font-family: 'Libre Baskerville', sans-serif;
   font-size: 2.5em;
   color: #25d366;
-  text-shadow: 2px 2px 2px #015641;
+  text-shadow: 2px 2px 1px #015641;
   font-weight: bold;
 }
 
@@ -340,7 +345,7 @@ footer {
 }
 
 .logo {
-  width: 15%;
+  width: 12%;
   padding: 0 9.4em;
 }
 
